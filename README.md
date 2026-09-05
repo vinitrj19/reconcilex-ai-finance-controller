@@ -1,272 +1,344 @@
-# ReconcileX — AI Finance Controller
+<div align="center">
 
-> AI-assisted payment reconciliation with deterministic-first matching, bounded Gemini reasoning, policy-controlled decisions, and an auditable exception path.
+# ⚡ ReconcileX
 
-**Razorpay AI Buildathon 2026 · Track 04 — AI Finance Controller**
+### AI Finance Controller for Safe, Explainable Payment Reconciliation
 
-## 1. Problem
+**Deterministic where possible. AI where necessary. Policy-controlled always.**
 
-Payment reconciliation becomes difficult when the same financial event appears differently across systems.
+<br>
 
-A payment gateway records the payment, an order system records the order, and a settlement system records what reaches the business. Amounts can differ because of fees; dates can shift; references can change; records can be duplicated or missing.
+![Python](https://img.shields.io/badge/Python-Backend-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-API-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+![React](https://img.shields.io/badge/React-Frontend-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-Frontend-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![Gemini](https://img.shields.io/badge/Gemini-AI_Reasoning-4285F4?style=for-the-badge&logo=google&logoColor=white)
+![Status](https://img.shields.io/badge/Status-Demo_Ready-success?style=for-the-badge)
 
-The core question is:
+<br>
 
-> **Do these records actually describe the same financial event?**
+**Razorpay AI Buildathon 2026 • Track 04 — AI Finance Controller**
 
-ReconcileX answers that question across a batch while avoiding unsafe forced matches.
+[🎥 Watch Demo](https://youtu.be/Yxvd2zoMIug) • [🏗️ Architecture](#️-architecture) • [🛡️ Safety](#️-safety-first-design) • [🚀 Run Locally](#-running-locally)
 
-## 2. What ReconcileX Does
+</div>
 
-ReconcileX takes three sources:
+---
 
-- Payments
-- Settlements
-- Orders
+## 💡 The Problem
 
-The controller:
+Payment reconciliation sounds simple:
 
-1. Normalizes records into a common internal representation.
-2. Performs deterministic reconciliation first.
-3. Generates bounded candidates for unresolved cases.
-4. Scores candidates using amount, date, and reference evidence.
-5. Sends only residual ambiguity to Gemini AI.
-6. Validates AI recommendations through M6 Policy Control.
-7. Resolves safe cases or escalates uncertain cases to review.
-8. Records decisions and evidence in an audit trail.
-9. Evaluates the controller on development and held-out synthetic data.
+> **Payment received → order identified → settlement confirmed.**
 
-### Core principle
+In reality, the same transaction may appear differently across payment, order and settlement systems.
 
-> **AI proposes. Deterministic policy decides.**
+Teams encounter:
 
-The LLM is never treated as the final financial authority.
+- missing references
+- delayed settlements
+- duplicate payments
+- refunds
+- amount differences
+- conflicting ownership
+- incomplete records
+- ambiguous matches
 
-## 3. Architecture
+A naïve automated system can create something worse than an unresolved transaction:
+
+> **a confident but incorrect financial match.**
+
+ReconcileX is designed around that risk.
+
+---
+
+## ✨ What is ReconcileX?
+
+**ReconcileX is a multi-source payment reconciliation controller that combines deterministic matching, bounded AI reasoning and a final financial policy layer.**
+
+Instead of asking an LLM to reconcile everything, ReconcileX follows a safer principle:
 
 ```text
-                 ┌───────────────────┐
-                 │ Payments          │
-                 │ Settlements       │
-                 │ Orders            │
-                 └─────────┬─────────┘
-                           │
-                           ▼
-                 ┌───────────────────┐
-                 │   Normalization   │
-                 └─────────┬─────────┘
-                           │
-                           ▼
-                 ┌───────────────────┐
-                 │ Deterministic     │
-                 │ Matching Engine   │
-                 └─────────┬─────────┘
-                           │
-                     unresolved cases
-                           │
-                           ▼
-                 ┌───────────────────┐
-                 │ Candidate + Score │
-                 └─────────┬─────────┘
-                           │
-                           ▼
-                 ┌───────────────────┐
-                 │ Gemini AI         │
-                 │ Reasoning         │
-                 └─────────┬─────────┘
-                           │
-                           ▼
-                 ┌───────────────────┐
-                 │ M6 Policy Control │
-                 └──────┬─────┬──────┘
-                        │     │
-                 RESOLVE│     │REVIEW
-                        ▼     ▼
-                 ┌───────────────────┐
-                 │   Audit Trail     │
-                 └───────────────────┘
+Rules first → AI only for residual ambiguity → Policy makes the final decision
 ```
 
-## 4. Why Deterministic-First?
+Gemini can **recommend**.
 
-Known financial patterns can be handled more cheaply, consistently, and explainably with rules:
+Gemini cannot independently authorize a financial match.
 
-- Exact identifier matches
-- Date shifts
-- Fee-adjusted settlements
-- Refunds
-- Partial settlements
-- Duplicate records
-- Missing payment / settlement records
+---
 
-Only genuinely ambiguous residual cases reach AI.
+## 🔄 How It Works
 
-## 5. AI and Financial Safety
+```text
+                    ┌─────────────────────────┐
+                    │ Payments • Settlements │
+                    │        • Orders        │
+                    └────────────┬────────────┘
+                                 │
+                                 ▼
+                    ┌─────────────────────────┐
+                    │      Normalization      │
+                    └────────────┬────────────┘
+                                 │
+                                 ▼
+                    ┌─────────────────────────┐
+                    │ Deterministic Matching  │
+                    │         Engine          │
+                    └────────────┬────────────┘
+                                 │
+                         unresolved cases
+                                 │
+                                 ▼
+                    ┌─────────────────────────┐
+                    │   Candidate + Scoring   │
+                    └────────────┬────────────┘
+                                 │
+                                 ▼
+                    ┌─────────────────────────┐
+                    │   Gemini AI Reasoning   │
+                    └────────────┬────────────┘
+                                 │
+                                 ▼
+                    ┌─────────────────────────┐
+                    │    M6 Policy Control    │
+                    └─────────┬───────┬───────┘
+                              │       │
+                       RESOLVE│       │REVIEW
+                              ▼       ▼
+                    ┌─────────────────────────┐
+                    │       Audit Trail       │
+                    └─────────────────────────┘
+```
 
-Gemini receives structured evidence and returns a recommendation such as:
+---
+
+## 🧠 Deterministic First. AI Second.
+
+ReconcileX intentionally keeps AI downstream.
+
+### 1️⃣ Normalize
+
+Payments, settlements and orders are converted into comparable representations.
+
+### 2️⃣ Deterministic Resolution
+
+Strong matches are handled through explainable rules rather than sending every transaction to an LLM.
+
+### 3️⃣ Candidate Generation & Scoring
+
+Residual cases receive candidate settlements and evidence scores using signals such as:
+
+| Signal | Purpose |
+|---|---|
+| 💰 Amount | Compare transaction values |
+| 📅 Date | Evaluate temporal compatibility |
+| 🔗 Reference | Detect shared identifiers |
+| 🧾 Candidate evidence | Preserve explainability |
+
+### 4️⃣ Gemini Reasoning
+
+Only residual ambiguous cases can reach the AI reasoning layer.
+
+Gemini receives bounded evidence and returns a structured recommendation such as:
 
 ```json
 {
   "decision": "MATCH",
-  "selected_candidate_id": "STL_00091",
-  "confidence": 0.91,
-  "reasoning": "The payment and candidate settlement agree on the available evidence.",
+  "selected_candidate_id": "STL_TEST",
+  "confidence": 1.0,
+  "reasoning": "Payment evidence matches the supplied candidate.",
   "missing_evidence": [],
   "recommended_action": "ACCEPT"
 }
 ```
 
-M6 then validates the recommendation before acceptance.
+### 5️⃣ M6 Policy Control
 
-Safety controls include:
+The AI recommendation is **not automatically a financial decision**.
 
-- One settlement can have at most one owner.
-- Duplicate payments cannot claim a settlement.
-- Deterministic decisions are protected from unsafe AI overrides.
-- AI MATCH decisions must reference an existing candidate.
-- Low-confidence or invalid AI responses fail safely.
-- Candidate collisions are resolved deterministically.
-- Ambiguous cases can remain in review.
-- AI recommendations are not the final authority.
-- Decisions are auditable.
-- Re-running the pipeline is designed to be idempotent.
+M6 checks safety invariants before a recommendation can become a final result.
 
-> **If evidence is insufficient, review is safer than a forced financial match.**
+---
 
-## 6. Evaluation Dataset
+## 🛡️ Safety-First Design
 
-The build uses synthetic reconciliation data.
+<div align="center">
 
-| Split | Events | Purpose |
-|---|---:|---|
-| Development | 120 | Tuning, development and debugging |
-| Held-out | 80 | Final evaluation snapshot |
-| **Total** | **200** | |
+### AI PROPOSES. DETERMINISTIC POLICY DECIDES.
 
-Scenarios include:
+</div>
 
-- Exact match
-- Date shift
-- Fee-adjusted settlement
-- Duplicate
-- Missing settlement
-- Missing payment
-- Refund
-- Partial settlement
-- Ambiguous cases
-- Unrelated records
+ReconcileX protects against unsafe automation through:
 
-The held-out set is kept separate from development tuning.
+- 🔒 one-settlement-one-owner enforcement
+- ♻️ duplicate protection
+- ⚔️ collision and conflict checks
+- 🎯 confidence requirements
+- 🧾 candidate validation
+- 🚨 review instead of forced matching
+- 📜 auditable decision history
+- 🚫 no direct AI-triggered financial action
 
-## 7. Evaluation Snapshot
+When evidence is insufficient:
+
+```text
+UNKNOWN ≠ MATCH
+```
+
+The system escalates the case rather than inventing certainty.
+
+---
+
+## 🖥️ Product Experience
+
+The ReconcileX control center provides:
+
+### 📊 Overview
+Operational reconciliation metrics and pipeline status.
+
+### 🔗 Reconciliation
+Payment-to-order-to-settlement decisions with evidence.
+
+### ⚠️ Exceptions
+Cases requiring investigation or review.
+
+### 📈 Evaluation
+Quality and safety-oriented evaluation metrics.
+
+### 📜 Audit
+Traceable reconciliation decisions and reasoning history.
+
+For an individual transaction, reviewers can inspect:
+
+```text
+Payment
+   ↓
+Order
+   ↓
+Settlement
+   ↓
+Candidate evidence
+   ↓
+Deterministic score
+   ↓
+AI reasoning
+   ↓
+Policy decision
+```
+
+This makes the system not merely automated, but **inspectable**.
+
+---
+
+## 📊 Development Demo Snapshot
+
+During the demonstrated development run:
 
 | Metric | Result |
 |---|---:|
-| Held-out event-level correctness | **96.25%** |
-| Financial false positives | **0** |
-| Development safe automation | **86.0%** |
+| 💳 Payments processed | **129** |
+| 🏦 Settlements | **111** |
+| 🧾 Orders | **120** |
+| 🤖 Residual cases reaching AI review | **12** |
+| 🛡️ Financial false positives shown by evaluation | **0** |
 
-These are results for the current synthetic-data prototype, not production financial accuracy.
+> These figures describe the included development/demo evaluation and should not be interpreted as production performance guarantees.
 
-> **The goal is not maximum automation. It is maximum safe automation.**
+---
 
-## 8. Engineering Journey
+## 🧩 Example: Why ReconcileX Matters
 
-ReconcileX evolved through failure.
+Suppose a payment of **₹2,776.55** exists.
 
-### Exact matching
-Good for clean records, but too brittle for messy reconciliation patterns.
+A settlement candidate also contains:
 
-### Deterministic rules
-Added handling for dates, fees, refunds, duplicates, partial settlements and missing records.
+```text
+Amount match     → 100%
+Date match       → 100%
+Reference match  → 0%
+Score            → 0.65
+Threshold        → 0.75
+```
 
-### Candidate generation and scoring
-Created bounded candidate sets and scored them using financial evidence.
+A simplistic system may decide:
 
-### AI reasoning
-Gemini was introduced only for residual ambiguity.
+> "The amount and date match, so accept it."
 
-### Policy control
-Real provider integration exposed failures that mocks could hide. This led to structured outputs, safe provider failure, confidence thresholds, ownership checks, collision handling and a hard boundary between AI recommendation and financial decision.
+ReconcileX instead asks:
 
-**The failures became part of the architecture.**
+- Is another payment competing for this settlement?
+- Is there reference evidence?
+- Is the confidence sufficient?
+- Would accepting it violate settlement ownership?
+- Can the decision be safely justified?
 
-## 9. Tech Stack
+If the evidence cannot arbitrate the conflict:
 
-### Backend
-- Python
-- FastAPI
-- Pandas
-- Pydantic
-- RapidFuzz / similarity scoring
-- Decimal-based financial calculations
+```text
+⚠️ REVIEW REQUIRED
+No automatic financial action taken.
+```
 
-### AI
-- Google Gemini
-- Structured model output
-- Provider abstraction
-- Mock and failing providers
+That behavior is a feature—not a failure.
 
-### Frontend
-- React
-- TypeScript
-- Tailwind CSS
-- shadcn/ui
-- Lucide icons
-- Recharts
+---
 
-### Production direction
-- PostgreSQL persistence
-- Real provider connectors
-- Asynchronous processing
-
-## 10. Product Interface
-
-### Overview
-Reconciliation metrics, pipeline stages and status distribution.
-
-### Reconciliation
-Transaction-level decisions, candidates, scores and decision source.
-
-### Exceptions
-Cases requiring human review instead of unsafe automatic resolution.
-
-### Evaluation
-Development and held-out evaluation metrics.
-
-### Audit
-Decision provenance and audit information.
-
-## 11. Decision States
-
-The controller represents outcomes including:
-
-`MATCH` · `PARTIAL_MATCH` · `REFUND` · `DUPLICATE` · `MISSING` · `CONFLICT` · `AMBIGUOUS` · `UNRESOLVED`
-
-The system does not force every payment into MATCH.
-
-## 12. Repository Structure
+## 🏗️ Architecture
 
 ```text
 ReconcileX/
+│
 ├── backend/
 │   ├── api/
-│   ├── scripts/
 │   ├── src/
-│   │   ├── normalization/
-│   │   ├── matching/
-│   │   ├── m5_provider.py
-│   │   └── policy.py
+│   ├── scripts/
 │   ├── tests/
-│   └── synthetic_data/
+│   ├── config/
+│   ├── data/
+│   └── evaluation/
+│
 ├── reconcilex_frontend/
 │   ├── src/
 │   └── ...
-├── README.md
-└── ...
+│
+├── INTEGRATION_REPORT.md
+└── README.md
 ```
 
-## 13. Run Locally
+### Technology Stack
+
+| Layer | Technology |
+|---|---|
+| 🎨 Frontend | React + TypeScript |
+| ⚙️ Backend | Python |
+| 🚀 API | FastAPI |
+| 🧠 AI | Google Gemini |
+| 🧪 Testing | Pytest |
+| 📦 Demo data | File-based development dataset |
+| 🛡️ Decision authority | Deterministic M6 policy |
+
+---
+
+## 🤖 Why Gemini?
+
+The AI layer exists for a specific reason:
+
+**deterministic rules are excellent when evidence is explicit, but residual ambiguity sometimes requires contextual reasoning.**
+
+Gemini is therefore used as a bounded reasoning component—not as an autonomous finance controller.
+
+This separation keeps the architecture:
+
+- cheaper
+- easier to audit
+- easier to test
+- safer
+- more explainable
+
+---
+
+## 🚀 Running Locally
 
 ### Backend
 
@@ -274,13 +346,31 @@ ReconcileX/
 cd backend
 
 export AI_PROVIDER=gemini
-export AI_MODEL=gemini-3.6-flash
-export AI_API_KEY="YOUR_GEMINI_API_KEY"
+export AI_MODEL=<supported-gemini-model>
+export AI_API_KEY=<your-api-key>
 
-python3 -m uvicorn api.main:app --reload --port 8001
+uvicorn api.main:app --host 0.0.0.0 --port 8001 --reload
+```
+
+Health check:
+
+```bash
+curl http://localhost:8001/api/v1/health
+```
+
+Expected:
+
+```json
+{
+  "status": "ok",
+  "service": "reconcilex-api",
+  "version": "1.0.0"
+}
 ```
 
 ### Frontend
+
+Open another terminal:
 
 ```bash
 cd reconcilex_frontend
@@ -288,80 +378,137 @@ npm install
 npm run dev
 ```
 
-Open:
+Then open the local URL shown by the development server.
+
+> 🔐 Never commit Gemini API keys or other credentials to the repository.
+
+---
+
+## 🧪 Engineering Journey
+
+ReconcileX was not built by simply connecting an LLM to financial records.
+
+The project evolved through several engineering problems:
+
+**Deterministic reconciliation → candidate generation → scoring → AI integration → policy enforcement → evaluation → API integration → dashboard.**
+
+During development, several important failure modes appeared:
+
+- AI provider configuration problems
+- model/API compatibility changes
+- mocked-provider versus real-provider behavior
+- ambiguous settlement ownership
+- protected-status policy behavior
+- test assumptions changing after provider migration
+- frontend/backend integration issues
+
+Those failures influenced the final architecture.
+
+The biggest design lesson was:
+
+> **In financial automation, knowing when not to automate is as important as knowing when to automate.**
+
+---
+
+## 🧪 Testing & Evaluation
+
+The repository contains automated tests covering important reconciliation components and provider behavior.
+
+The evaluation strategy emphasizes more than raw matching accuracy.
+
+Particular attention is given to:
 
 ```text
-http://localhost:5173
+✓ Financial false positives
+✓ Settlement ownership
+✓ Duplicate protection
+✓ Ambiguity preservation
+✓ Deterministic behavior
+✓ AI schema validation
+✓ Failure-safe behavior
 ```
 
-The frontend uses:
+This reflects the central project objective:
 
-```text
-http://localhost:8001/api/v1
-```
+> **maximize useful automation without sacrificing financial safety.**
 
-**Never commit an API key.** Keep secrets in environment variables or a local `.env` excluded by `.gitignore`.
+---
 
-## 14. Demo Video
+## ⚠️ Current Limitations
 
-Upload the final video to **YouTube as Unlisted** (recommended) or Google Drive with viewer access.
+ReconcileX is a buildathon prototype, not a production banking platform.
 
-Then replace this line:
+Current limitations include:
 
-```text
-[Watch the ReconcileX Demo](https://youtu.be/Yxvd2zoMIug)
-```
+- file-based demonstration data
+- no live payment processor integration
+- no production database
+- no enterprise authentication/RBAC
+- no real fund movement
+- Gemini availability depends on provider/API configuration
+- further large-scale evaluation would be required before production use
 
-with the actual video link.
+These boundaries are intentional and clearly separated from the project's demonstrated capabilities.
 
-For the Razorpay submission portal, paste the same video URL into the **video/demo submission field** if the portal asks for a link.
+---
 
-## 15. What Makes ReconcileX Different?
+## 🗺️ Roadmap
 
-1. **Deterministic-first architecture** — AI is not used where explicit financial rules are sufficient.
-2. **Bounded AI** — Gemini receives residual ambiguous cases with bounded candidates.
-3. **Policy-controlled AI** — the LLM recommends; deterministic policy decides.
-4. **Explicit uncertainty** — unresolved cases remain visible.
-5. **Financial safety invariants** — ownership, duplicate protection, collisions and confidence thresholds are enforced outside the model.
-6. **Evaluation discipline** — development tuning is separated from held-out evaluation.
-7. **Auditability** — decisions can be traced to source, evidence and reasoning.
+Future versions could introduce:
 
-## 16. Current Limitations
+- 🔌 live payment/settlement connectors
+- 🗄️ production database persistence
+- 👥 role-based reviewer workflows
+- 📬 exception queues and notifications
+- 📊 reconciliation analytics
+- 🔁 configurable reconciliation policies
+- 🧠 provider abstraction across multiple reasoning models
+- 📡 event-driven ingestion
+- 🏢 multi-merchant support
+- 🔐 enterprise security controls
 
-This is a buildathon prototype, not a production finance platform.
+---
 
-- Synthetic rather than live production data
-- Prototype-level payment and settlement connectors
-- Human review is not yet a full operational queue
-- AI introduces latency and cost
-- Production authentication, observability and deployment hardening remain
-- Evaluation results should not be interpreted as production accuracy
+## 🎥 Demo
 
-## 17. Roadmap
+<div align="center">
 
-1. Integrate real payment and settlement providers.
-2. Add durable PostgreSQL persistence.
-3. Add asynchronous reconciliation jobs.
-4. Cache and batch AI requests where appropriate.
-5. Build a complete finance-team review workflow.
-6. Add production authentication and observability.
-7. Learn from resolved exceptions while preserving deterministic financial controls.
+### See ReconcileX in action
 
-The long-term goal is not to replace finance teams with AI.
+[![Demo](https://img.shields.io/badge/▶_WATCH_DEMO-ReconcileX-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](YOUR_YOUTUBE_LINK)
 
-It is to give them a controller that:
+</div>
 
-> **automates what can be proven, reasons about what is ambiguous, and makes uncertainty visible.**
+The demo walks through:
 
-## 18. Buildathon Context
+**Problem → Architecture → Dashboard → Deterministic matching → Ambiguous case → Gemini reasoning → M6 policy → Auditability**
 
-**Event:** Razorpay AI Buildathon 2026  
-**Track:** Track 04 — AI Finance Controller  
-**Project:** ReconcileX  
-**Focus:** Multi-source payment reconciliation with deterministic-first resolution and policy-controlled AI reasoning.
+---
 
-## 19. Final Takeaway
+## 🏆 Built For
 
-> **Use rules for what can be proven. Use AI for what requires judgment. Use policy to control the financial decision.**
+<div align="center">
 
-ReconcileX is designed around that separation to make reconciliation safer, more explainable and more auditable.
+### Razorpay AI Buildathon 2026
+
+**Track 04 — AI Finance Controller**
+
+<br>
+
+> Building an AI-assisted finance controller that automates confidently when evidence is strong and escalates safely when it isn't.
+
+</div>
+
+---
+
+## 👨‍💻 Author
+
+<div align="center">
+
+### Vinit Raj
+
+Built with a focus on **financial safety, explainability and practical AI orchestration.**
+
+⭐ If you find ReconcileX interesting, consider starring the repository.
+
+</div>
