@@ -475,7 +475,7 @@ Future versions could introduce:
 
 ### See ReconcileX in action
 
-[![Demo](https://img.shields.io/badge/▶_WATCH_DEMO-ReconcileX-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](YOUR_YOUTUBE_LINK)
+[![Demo](https://img.shields.io/badge/▶_WATCH_DEMO-ReconcileX-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/Yxvd2zoMIug)
 
 </div>
 
