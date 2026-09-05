@@ -1,0 +1,2657 @@
+[
+  {
+    "event_id": "EVT_00001",
+    "anomaly_type": "date_shift",
+    "records": {
+      "payment": [
+        "PAY_00001"
+      ],
+      "settlement": [
+        "STL_00001"
+      ],
+      "order": [
+        "ORD_00001"
+      ]
+    },
+    "expected_status": "MATCH",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00001",
+        "settlement": "STL_00001"
+      }
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00004",
+    "anomaly_type": "unrelated",
+    "records": {
+      "payment": [
+        "PAY_00005"
+      ],
+      "settlement": [
+        "STL_00004"
+      ],
+      "order": [
+        "ORD_00005"
+      ]
+    },
+    "expected_status": "UNRESOLVED",
+    "expected_pairs": [],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00005",
+    "anomaly_type": "duplicate",
+    "records": {
+      "payment": [
+        "PAY_00006",
+        "PAY_00007"
+      ],
+      "settlement": [
+        "STL_00005"
+      ],
+      "order": [
+        "ORD_00007"
+      ]
+    },
+    "expected_status": "DUPLICATE",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00006",
+        "settlement": "STL_00005"
+      }
+    ],
+    "duplicate_of": {
+      "PAY_00007": "PAY_00006"
+    },
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00007",
+    "anomaly_type": "exact_match",
+    "records": {
+      "payment": [
+        "PAY_00010"
+      ],
+      "settlement": [
+        "STL_00007"
+      ],
+      "order": [
+        "ORD_00009"
+      ]
+    },
+    "expected_status": "MATCH",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00010",
+        "settlement": "STL_00007"
+      }
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00008",
+    "anomaly_type": "exact_match",
+    "records": {
+      "payment": [
+        "PAY_00011"
+      ],
+      "settlement": [
+        "STL_00008"
+      ],
+      "order": [
+        "ORD_00010"
+      ]
+    },
+    "expected_status": "MATCH",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00011",
+        "settlement": "STL_00008"
+      }
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00009",
+    "anomaly_type": "date_shift",
+    "records": {
+      "payment": [
+        "PAY_00012"
+      ],
+      "settlement": [
+        "STL_00009"
+      ],
+      "order": [
+        "ORD_00011"
+      ]
+    },
+    "expected_status": "MATCH",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00012",
+        "settlement": "STL_00009"
+      }
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00012",
+    "anomaly_type": "partial_settlement",
+    "records": {
+      "payment": [
+        "PAY_00015"
+      ],
+      "settlement": [
+        "STL_00011"
+      ],
+      "order": [
+        "ORD_00014"
+      ]
+    },
+    "expected_status": "CONFLICT",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00015",
+        "settlement": "STL_00011"
+      }
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00013",
+    "anomaly_type": "missing_settlement",
+    "records": {
+      "payment": [
+        "PAY_00016"
+      ],
+      "settlement": [],
+      "order": [
+        "ORD_00015"
+      ]
+    },
+    "expected_status": "MISSING",
+    "expected_pairs": [],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00015",
+    "anomaly_type": "refund",
+    "records": {
+      "payment": [
+        "PAY_00018"
+      ],
+      "settlement": [
+        "STL_00013"
+      ],
+      "order": [
+        "ORD_00017"
+      ]
+    },
+    "expected_status": "REFUND",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00018",
+        "settlement": "STL_00013"
+      }
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00016",
+    "anomaly_type": "partial_settlement",
+    "records": {
+      "payment": [
+        "PAY_00019"
+      ],
+      "settlement": [
+        "STL_00014"
+      ],
+      "order": [
+        "ORD_00018"
+      ]
+    },
+    "expected_status": "CONFLICT",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00019",
+        "settlement": "STL_00014"
+      }
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00018",
+    "anomaly_type": "missing_settlement",
+    "records": {
+      "payment": [
+        "PAY_00021"
+      ],
+      "settlement": [],
+      "order": [
+        "ORD_00020"
+      ]
+    },
+    "expected_status": "MISSING",
+    "expected_pairs": [],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00019",
+    "anomaly_type": "exact_match",
+    "records": {
+      "payment": [
+        "PAY_00022"
+      ],
+      "settlement": [
+        "STL_00016"
+      ],
+      "order": [
+        "ORD_00021"
+      ]
+    },
+    "expected_status": "MATCH",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00022",
+        "settlement": "STL_00016"
+      }
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00020",
+    "anomaly_type": "exact_match",
+    "records": {
+      "payment": [
+        "PAY_00023"
+      ],
+      "settlement": [
+        "STL_00017"
+      ],
+      "order": [
+        "ORD_00022"
+      ]
+    },
+    "expected_status": "MATCH",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00023",
+        "settlement": "STL_00017"
+      }
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00022",
+    "anomaly_type": "exact_match",
+    "records": {
+      "payment": [
+        "PAY_00025"
+      ],
+      "settlement": [
+        "STL_00019"
+      ],
+      "order": [
+        "ORD_00024"
+      ]
+    },
+    "expected_status": "MATCH",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00025",
+        "settlement": "STL_00019"
+      }
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00024",
+    "anomaly_type": "missing_settlement",
+    "records": {
+      "payment": [
+        "PAY_00027"
+      ],
+      "settlement": [],
+      "order": [
+        "ORD_00026"
+      ]
+    },
+    "expected_status": "MISSING",
+    "expected_pairs": [],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00028",
+    "anomaly_type": "duplicate",
+    "records": {
+      "payment": [
+        "PAY_00032",
+        "PAY_00033"
+      ],
+      "settlement": [
+        "STL_00024"
+      ],
+      "order": [
+        "ORD_00031"
+      ]
+    },
+    "expected_status": "DUPLICATE",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00032",
+        "settlement": "STL_00024"
+      }
+    ],
+    "duplicate_of": {
+      "PAY_00033": "PAY_00032"
+    },
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00029",
+    "anomaly_type": "exact_match",
+    "records": {
+      "payment": [
+        "PAY_00034"
+      ],
+      "settlement": [
+        "STL_00025"
+      ],
+      "order": [
+        "ORD_00032"
+      ]
+    },
+    "expected_status": "MATCH",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00034",
+        "settlement": "STL_00025"
+      }
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00030",
+    "anomaly_type": "unrelated",
+    "records": {
+      "payment": [
+        "PAY_00035"
+      ],
+      "settlement": [
+        "STL_00026"
+      ],
+      "order": [
+        "ORD_00033"
+      ]
+    },
+    "expected_status": "UNRESOLVED",
+    "expected_pairs": [],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00033",
+    "anomaly_type": "exact_match",
+    "records": {
+      "payment": [
+        "PAY_00039"
+      ],
+      "settlement": [
+        "STL_00029"
+      ],
+      "order": [
+        "ORD_00037"
+      ]
+    },
+    "expected_status": "MATCH",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00039",
+        "settlement": "STL_00029"
+      }
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00035",
+    "anomaly_type": "refund",
+    "records": {
+      "payment": [
+        "PAY_00041"
+      ],
+      "settlement": [
+        "STL_00031"
+      ],
+      "order": [
+        "ORD_00039"
+      ]
+    },
+    "expected_status": "REFUND",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00041",
+        "settlement": "STL_00031"
+      }
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00036",
+    "anomaly_type": "date_shift",
+    "records": {
+      "payment": [
+        "PAY_00042"
+      ],
+      "settlement": [
+        "STL_00032"
+      ],
+      "order": [
+        "ORD_00040"
+      ]
+    },
+    "expected_status": "MATCH",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00042",
+        "settlement": "STL_00032"
+      }
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00037",
+    "anomaly_type": "date_shift",
+    "records": {
+      "payment": [
+        "PAY_00043"
+      ],
+      "settlement": [
+        "STL_00033"
+      ],
+      "order": [
+        "ORD_00041"
+      ]
+    },
+    "expected_status": "MATCH",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00043",
+        "settlement": "STL_00033"
+      }
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00038",
+    "anomaly_type": "unrelated",
+    "records": {
+      "payment": [
+        "PAY_00044"
+      ],
+      "settlement": [
+        "STL_00034"
+      ],
+      "order": [
+        "ORD_00042"
+      ]
+    },
+    "expected_status": "UNRESOLVED",
+    "expected_pairs": [],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00039",
+    "anomaly_type": "exact_match",
+    "records": {
+      "payment": [
+        "PAY_00045"
+      ],
+      "settlement": [
+        "STL_00035"
+      ],
+      "order": [
+        "ORD_00044"
+      ]
+    },
+    "expected_status": "MATCH",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00045",
+        "settlement": "STL_00035"
+      }
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00040",
+    "anomaly_type": "partial_settlement",
+    "records": {
+      "payment": [
+        "PAY_00046"
+      ],
+      "settlement": [
+        "STL_00036"
+      ],
+      "order": [
+        "ORD_00045"
+      ]
+    },
+    "expected_status": "CONFLICT",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00046",
+        "settlement": "STL_00036"
+      }
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00041",
+    "anomaly_type": "partial_settlement",
+    "records": {
+      "payment": [
+        "PAY_00047"
+      ],
+      "settlement": [
+        "STL_00037"
+      ],
+      "order": [
+        "ORD_00046"
+      ]
+    },
+    "expected_status": "CONFLICT",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00047",
+        "settlement": "STL_00037"
+      }
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00042",
+    "anomaly_type": "date_shift",
+    "records": {
+      "payment": [
+        "PAY_00048"
+      ],
+      "settlement": [
+        "STL_00038"
+      ],
+      "order": [
+        "ORD_00047"
+      ]
+    },
+    "expected_status": "MATCH",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00048",
+        "settlement": "STL_00038"
+      }
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00043",
+    "anomaly_type": "exact_match",
+    "records": {
+      "payment": [
+        "PAY_00049"
+      ],
+      "settlement": [
+        "STL_00039"
+      ],
+      "order": [
+        "ORD_00048"
+      ]
+    },
+    "expected_status": "MATCH",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00049",
+        "settlement": "STL_00039"
+      }
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00044",
+    "anomaly_type": "missing_payment",
+    "records": {
+      "payment": [],
+      "settlement": [
+        "STL_00040"
+      ],
+      "order": []
+    },
+    "expected_status": "MISSING",
+    "expected_pairs": [],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00047",
+    "anomaly_type": "missing_settlement",
+    "records": {
+      "payment": [
+        "PAY_00052"
+      ],
+      "settlement": [],
+      "order": [
+        "ORD_00051"
+      ]
+    },
+    "expected_status": "MISSING",
+    "expected_pairs": [],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00049",
+    "anomaly_type": "date_shift",
+    "records": {
+      "payment": [
+        "PAY_00054"
+      ],
+      "settlement": [
+        "STL_00044"
+      ],
+      "order": [
+        "ORD_00053"
+      ]
+    },
+    "expected_status": "MATCH",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00054",
+        "settlement": "STL_00044"
+      }
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00050",
+    "anomaly_type": "duplicate",
+    "records": {
+      "payment": [
+        "PAY_00055",
+        "PAY_00056"
+      ],
+      "settlement": [
+        "STL_00045"
+      ],
+      "order": [
+        "ORD_00054"
+      ]
+    },
+    "expected_status": "DUPLICATE",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00055",
+        "settlement": "STL_00045"
+      }
+    ],
+    "duplicate_of": {
+      "PAY_00056": "PAY_00055"
+    },
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00052",
+    "anomaly_type": "fee_adjusted",
+    "records": {
+      "payment": [
+        "PAY_00058"
+      ],
+      "settlement": [
+        "STL_00047"
+      ],
+      "order": [
+        "ORD_00056"
+      ]
+    },
+    "expected_status": "PARTIAL_MATCH",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00058",
+        "settlement": "STL_00047"
+      }
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00054",
+    "anomaly_type": "missing_payment",
+    "records": {
+      "payment": [],
+      "settlement": [
+        "STL_00049"
+      ],
+      "order": []
+    },
+    "expected_status": "MISSING",
+    "expected_pairs": [],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00056",
+    "anomaly_type": "exact_match",
+    "records": {
+      "payment": [
+        "PAY_00061"
+      ],
+      "settlement": [
+        "STL_00051"
+      ],
+      "order": [
+        "ORD_00059"
+      ]
+    },
+    "expected_status": "MATCH",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00061",
+        "settlement": "STL_00051"
+      }
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00058",
+    "anomaly_type": "unrelated",
+    "records": {
+      "payment": [
+        "PAY_00063"
+      ],
+      "settlement": [
+        "STL_00053"
+      ],
+      "order": [
+        "ORD_00061"
+      ]
+    },
+    "expected_status": "UNRESOLVED",
+    "expected_pairs": [],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00059",
+    "anomaly_type": "exact_match",
+    "records": {
+      "payment": [
+        "PAY_00064"
+      ],
+      "settlement": [
+        "STL_00054"
+      ],
+      "order": [
+        "ORD_00063"
+      ]
+    },
+    "expected_status": "MATCH",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00064",
+        "settlement": "STL_00054"
+      }
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00063",
+    "anomaly_type": "refund",
+    "records": {
+      "payment": [
+        "PAY_00068"
+      ],
+      "settlement": [
+        "STL_00058"
+      ],
+      "order": [
+        "ORD_00067"
+      ]
+    },
+    "expected_status": "REFUND",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00068",
+        "settlement": "STL_00058"
+      }
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00067",
+    "anomaly_type": "duplicate",
+    "records": {
+      "payment": [
+        "PAY_00072",
+        "PAY_00073"
+      ],
+      "settlement": [
+        "STL_00061"
+      ],
+      "order": [
+        "ORD_00071"
+      ]
+    },
+    "expected_status": "DUPLICATE",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00072",
+        "settlement": "STL_00061"
+      }
+    ],
+    "duplicate_of": {
+      "PAY_00073": "PAY_00072"
+    },
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00068",
+    "anomaly_type": "exact_match",
+    "records": {
+      "payment": [
+        "PAY_00074"
+      ],
+      "settlement": [
+        "STL_00062"
+      ],
+      "order": [
+        "ORD_00072"
+      ]
+    },
+    "expected_status": "MATCH",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00074",
+        "settlement": "STL_00062"
+      }
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00069",
+    "anomaly_type": "exact_match",
+    "records": {
+      "payment": [
+        "PAY_00075"
+      ],
+      "settlement": [
+        "STL_00063"
+      ],
+      "order": [
+        "ORD_00073"
+      ]
+    },
+    "expected_status": "MATCH",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00075",
+        "settlement": "STL_00063"
+      }
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00073",
+    "anomaly_type": "date_shift",
+    "records": {
+      "payment": [
+        "PAY_00078"
+      ],
+      "settlement": [
+        "STL_00067"
+      ],
+      "order": [
+        "ORD_00076"
+      ]
+    },
+    "expected_status": "MATCH",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00078",
+        "settlement": "STL_00067"
+      }
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00075",
+    "anomaly_type": "partial_settlement",
+    "records": {
+      "payment": [
+        "PAY_00080"
+      ],
+      "settlement": [
+        "STL_00069"
+      ],
+      "order": [
+        "ORD_00078"
+      ]
+    },
+    "expected_status": "CONFLICT",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00080",
+        "settlement": "STL_00069"
+      }
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00081",
+    "anomaly_type": "fee_adjusted",
+    "records": {
+      "payment": [
+        "PAY_00086"
+      ],
+      "settlement": [
+        "STL_00075"
+      ],
+      "order": [
+        "ORD_00085"
+      ]
+    },
+    "expected_status": "PARTIAL_MATCH",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00086",
+        "settlement": "STL_00075"
+      }
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00082",
+    "anomaly_type": "duplicate",
+    "records": {
+      "payment": [
+        "PAY_00087",
+        "PAY_00088"
+      ],
+      "settlement": [
+        "STL_00076"
+      ],
+      "order": [
+        "ORD_00086"
+      ]
+    },
+    "expected_status": "DUPLICATE",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00087",
+        "settlement": "STL_00076"
+      }
+    ],
+    "duplicate_of": {
+      "PAY_00088": "PAY_00087"
+    },
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00084",
+    "anomaly_type": "missing_settlement",
+    "records": {
+      "payment": [
+        "PAY_00090"
+      ],
+      "settlement": [],
+      "order": [
+        "ORD_00088"
+      ]
+    },
+    "expected_status": "MISSING",
+    "expected_pairs": [],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00085",
+    "anomaly_type": "missing_payment",
+    "records": {
+      "payment": [],
+      "settlement": [
+        "STL_00078"
+      ],
+      "order": []
+    },
+    "expected_status": "MISSING",
+    "expected_pairs": [],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00086",
+    "anomaly_type": "exact_match",
+    "records": {
+      "payment": [
+        "PAY_00091"
+      ],
+      "settlement": [
+        "STL_00079"
+      ],
+      "order": [
+        "ORD_00089"
+      ]
+    },
+    "expected_status": "MATCH",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00091",
+        "settlement": "STL_00079"
+      }
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00087",
+    "anomaly_type": "exact_match",
+    "records": {
+      "payment": [
+        "PAY_00092"
+      ],
+      "settlement": [
+        "STL_00080"
+      ],
+      "order": [
+        "ORD_00090"
+      ]
+    },
+    "expected_status": "MATCH",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00092",
+        "settlement": "STL_00080"
+      }
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00088",
+    "anomaly_type": "missing_payment",
+    "records": {
+      "payment": [],
+      "settlement": [
+        "STL_00081"
+      ],
+      "order": []
+    },
+    "expected_status": "MISSING",
+    "expected_pairs": [],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00091",
+    "anomaly_type": "date_shift",
+    "records": {
+      "payment": [
+        "PAY_00096"
+      ],
+      "settlement": [
+        "STL_00084"
+      ],
+      "order": [
+        "ORD_00093"
+      ]
+    },
+    "expected_status": "MATCH",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00096",
+        "settlement": "STL_00084"
+      }
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00095",
+    "anomaly_type": "refund",
+    "records": {
+      "payment": [
+        "PAY_00099"
+      ],
+      "settlement": [
+        "STL_00088"
+      ],
+      "order": [
+        "ORD_00096"
+      ]
+    },
+    "expected_status": "REFUND",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00099",
+        "settlement": "STL_00088"
+      }
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00096",
+    "anomaly_type": "date_shift",
+    "records": {
+      "payment": [
+        "PAY_00100"
+      ],
+      "settlement": [
+        "STL_00089"
+      ],
+      "order": [
+        "ORD_00097"
+      ]
+    },
+    "expected_status": "MATCH",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00100",
+        "settlement": "STL_00089"
+      }
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00097",
+    "anomaly_type": "exact_match",
+    "records": {
+      "payment": [
+        "PAY_00101"
+      ],
+      "settlement": [
+        "STL_00090"
+      ],
+      "order": [
+        "ORD_00098"
+      ]
+    },
+    "expected_status": "MATCH",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00101",
+        "settlement": "STL_00090"
+      }
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00098",
+    "anomaly_type": "ambiguous",
+    "records": {
+      "payment": [
+        "PAY_00102",
+        "PAY_00103"
+      ],
+      "settlement": [
+        "STL_00091"
+      ],
+      "order": [
+        "ORD_00099",
+        "ORD_00100"
+      ]
+    },
+    "expected_status": "AMBIGUOUS",
+    "expected_pairs": [],
+    "candidates": [
+      "PAY_00102",
+      "PAY_00103"
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00099",
+    "anomaly_type": "duplicate",
+    "records": {
+      "payment": [
+        "PAY_00104",
+        "PAY_00105"
+      ],
+      "settlement": [
+        "STL_00092"
+      ],
+      "order": [
+        "ORD_00101"
+      ]
+    },
+    "expected_status": "DUPLICATE",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00104",
+        "settlement": "STL_00092"
+      }
+    ],
+    "duplicate_of": {
+      "PAY_00105": "PAY_00104"
+    },
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00102",
+    "anomaly_type": "exact_match",
+    "records": {
+      "payment": [
+        "PAY_00108"
+      ],
+      "settlement": [
+        "STL_00095"
+      ],
+      "order": [
+        "ORD_00104"
+      ]
+    },
+    "expected_status": "MATCH",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00108",
+        "settlement": "STL_00095"
+      }
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00103",
+    "anomaly_type": "exact_match",
+    "records": {
+      "payment": [
+        "PAY_00109"
+      ],
+      "settlement": [
+        "STL_00096"
+      ],
+      "order": [
+        "ORD_00105"
+      ]
+    },
+    "expected_status": "MATCH",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00109",
+        "settlement": "STL_00096"
+      }
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00104",
+    "anomaly_type": "ambiguous",
+    "records": {
+      "payment": [
+        "PAY_00110",
+        "PAY_00111"
+      ],
+      "settlement": [
+        "STL_00097"
+      ],
+      "order": [
+        "ORD_00106",
+        "ORD_00107"
+      ]
+    },
+    "expected_status": "AMBIGUOUS",
+    "expected_pairs": [],
+    "candidates": [
+      "PAY_00110",
+      "PAY_00111"
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00105",
+    "anomaly_type": "fee_adjusted",
+    "records": {
+      "payment": [
+        "PAY_00112"
+      ],
+      "settlement": [
+        "STL_00098"
+      ],
+      "order": [
+        "ORD_00108"
+      ]
+    },
+    "expected_status": "PARTIAL_MATCH",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00112",
+        "settlement": "STL_00098"
+      }
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00106",
+    "anomaly_type": "fee_adjusted",
+    "records": {
+      "payment": [
+        "PAY_00113"
+      ],
+      "settlement": [
+        "STL_00099"
+      ],
+      "order": [
+        "ORD_00109"
+      ]
+    },
+    "expected_status": "PARTIAL_MATCH",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00113",
+        "settlement": "STL_00099"
+      }
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00107",
+    "anomaly_type": "missing_settlement",
+    "records": {
+      "payment": [
+        "PAY_00114"
+      ],
+      "settlement": [],
+      "order": [
+        "ORD_00110"
+      ]
+    },
+    "expected_status": "MISSING",
+    "expected_pairs": [],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00113",
+    "anomaly_type": "exact_match",
+    "records": {
+      "payment": [
+        "PAY_00122"
+      ],
+      "settlement": [
+        "STL_00104"
+      ],
+      "order": [
+        "ORD_00117"
+      ]
+    },
+    "expected_status": "MATCH",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00122",
+        "settlement": "STL_00104"
+      }
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00115",
+    "anomaly_type": "partial_settlement",
+    "records": {
+      "payment": [
+        "PAY_00124"
+      ],
+      "settlement": [
+        "STL_00106"
+      ],
+      "order": [
+        "ORD_00119"
+      ]
+    },
+    "expected_status": "CONFLICT",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00124",
+        "settlement": "STL_00106"
+      }
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00118",
+    "anomaly_type": "missing_settlement",
+    "records": {
+      "payment": [
+        "PAY_00126"
+      ],
+      "settlement": [],
+      "order": [
+        "ORD_00121"
+      ]
+    },
+    "expected_status": "MISSING",
+    "expected_pairs": [],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00119",
+    "anomaly_type": "missing_settlement",
+    "records": {
+      "payment": [
+        "PAY_00127"
+      ],
+      "settlement": [],
+      "order": [
+        "ORD_00122"
+      ]
+    },
+    "expected_status": "MISSING",
+    "expected_pairs": [],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00120",
+    "anomaly_type": "exact_match",
+    "records": {
+      "payment": [
+        "PAY_00128"
+      ],
+      "settlement": [
+        "STL_00108"
+      ],
+      "order": [
+        "ORD_00123"
+      ]
+    },
+    "expected_status": "MATCH",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00128",
+        "settlement": "STL_00108"
+      }
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00123",
+    "anomaly_type": "exact_match",
+    "records": {
+      "payment": [
+        "PAY_00131"
+      ],
+      "settlement": [
+        "STL_00111"
+      ],
+      "order": [
+        "ORD_00126"
+      ]
+    },
+    "expected_status": "MATCH",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00131",
+        "settlement": "STL_00111"
+      }
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00127",
+    "anomaly_type": "fee_adjusted",
+    "records": {
+      "payment": [
+        "PAY_00136"
+      ],
+      "settlement": [
+        "STL_00115"
+      ],
+      "order": [
+        "ORD_00130"
+      ]
+    },
+    "expected_status": "PARTIAL_MATCH",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00136",
+        "settlement": "STL_00115"
+      }
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00128",
+    "anomaly_type": "date_shift",
+    "records": {
+      "payment": [
+        "PAY_00137"
+      ],
+      "settlement": [
+        "STL_00116"
+      ],
+      "order": [
+        "ORD_00131"
+      ]
+    },
+    "expected_status": "MATCH",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00137",
+        "settlement": "STL_00116"
+      }
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00130",
+    "anomaly_type": "fee_adjusted",
+    "records": {
+      "payment": [
+        "PAY_00139"
+      ],
+      "settlement": [
+        "STL_00118"
+      ],
+      "order": [
+        "ORD_00133"
+      ]
+    },
+    "expected_status": "PARTIAL_MATCH",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00139",
+        "settlement": "STL_00118"
+      }
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00131",
+    "anomaly_type": "fee_adjusted",
+    "records": {
+      "payment": [
+        "PAY_00140"
+      ],
+      "settlement": [
+        "STL_00119"
+      ],
+      "order": [
+        "ORD_00134"
+      ]
+    },
+    "expected_status": "PARTIAL_MATCH",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00140",
+        "settlement": "STL_00119"
+      }
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00133",
+    "anomaly_type": "fee_adjusted",
+    "records": {
+      "payment": [
+        "PAY_00142"
+      ],
+      "settlement": [
+        "STL_00121"
+      ],
+      "order": [
+        "ORD_00136"
+      ]
+    },
+    "expected_status": "PARTIAL_MATCH",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00142",
+        "settlement": "STL_00121"
+      }
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00134",
+    "anomaly_type": "duplicate",
+    "records": {
+      "payment": [
+        "PAY_00143",
+        "PAY_00144"
+      ],
+      "settlement": [
+        "STL_00122"
+      ],
+      "order": [
+        "ORD_00137"
+      ]
+    },
+    "expected_status": "DUPLICATE",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00143",
+        "settlement": "STL_00122"
+      }
+    ],
+    "duplicate_of": {
+      "PAY_00144": "PAY_00143"
+    },
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00136",
+    "anomaly_type": "refund",
+    "records": {
+      "payment": [
+        "PAY_00146"
+      ],
+      "settlement": [
+        "STL_00124"
+      ],
+      "order": [
+        "ORD_00140"
+      ]
+    },
+    "expected_status": "REFUND",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00146",
+        "settlement": "STL_00124"
+      }
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00137",
+    "anomaly_type": "exact_match",
+    "records": {
+      "payment": [
+        "PAY_00147"
+      ],
+      "settlement": [
+        "STL_00125"
+      ],
+      "order": [
+        "ORD_00141"
+      ]
+    },
+    "expected_status": "MATCH",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00147",
+        "settlement": "STL_00125"
+      }
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00138",
+    "anomaly_type": "ambiguous",
+    "records": {
+      "payment": [
+        "PAY_00148",
+        "PAY_00149"
+      ],
+      "settlement": [
+        "STL_00126"
+      ],
+      "order": [
+        "ORD_00142",
+        "ORD_00143"
+      ]
+    },
+    "expected_status": "AMBIGUOUS",
+    "expected_pairs": [],
+    "candidates": [
+      "PAY_00148",
+      "PAY_00149"
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00140",
+    "anomaly_type": "date_shift",
+    "records": {
+      "payment": [
+        "PAY_00150"
+      ],
+      "settlement": [
+        "STL_00128"
+      ],
+      "order": [
+        "ORD_00144"
+      ]
+    },
+    "expected_status": "MATCH",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00150",
+        "settlement": "STL_00128"
+      }
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00142",
+    "anomaly_type": "refund",
+    "records": {
+      "payment": [
+        "PAY_00152"
+      ],
+      "settlement": [
+        "STL_00130"
+      ],
+      "order": [
+        "ORD_00146"
+      ]
+    },
+    "expected_status": "REFUND",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00152",
+        "settlement": "STL_00130"
+      }
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00143",
+    "anomaly_type": "exact_match",
+    "records": {
+      "payment": [
+        "PAY_00153"
+      ],
+      "settlement": [
+        "STL_00131"
+      ],
+      "order": [
+        "ORD_00147"
+      ]
+    },
+    "expected_status": "MATCH",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00153",
+        "settlement": "STL_00131"
+      }
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00145",
+    "anomaly_type": "fee_adjusted",
+    "records": {
+      "payment": [
+        "PAY_00155"
+      ],
+      "settlement": [
+        "STL_00133"
+      ],
+      "order": [
+        "ORD_00149"
+      ]
+    },
+    "expected_status": "PARTIAL_MATCH",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00155",
+        "settlement": "STL_00133"
+      }
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00147",
+    "anomaly_type": "missing_payment",
+    "records": {
+      "payment": [],
+      "settlement": [
+        "STL_00135"
+      ],
+      "order": []
+    },
+    "expected_status": "MISSING",
+    "expected_pairs": [],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00148",
+    "anomaly_type": "exact_match",
+    "records": {
+      "payment": [
+        "PAY_00157"
+      ],
+      "settlement": [
+        "STL_00136"
+      ],
+      "order": [
+        "ORD_00151"
+      ]
+    },
+    "expected_status": "MATCH",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00157",
+        "settlement": "STL_00136"
+      }
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00149",
+    "anomaly_type": "fee_adjusted",
+    "records": {
+      "payment": [
+        "PAY_00158"
+      ],
+      "settlement": [
+        "STL_00137"
+      ],
+      "order": [
+        "ORD_00152"
+      ]
+    },
+    "expected_status": "PARTIAL_MATCH",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00158",
+        "settlement": "STL_00137"
+      }
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00150",
+    "anomaly_type": "exact_match",
+    "records": {
+      "payment": [
+        "PAY_00159"
+      ],
+      "settlement": [
+        "STL_00138"
+      ],
+      "order": [
+        "ORD_00153"
+      ]
+    },
+    "expected_status": "MATCH",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00159",
+        "settlement": "STL_00138"
+      }
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00152",
+    "anomaly_type": "duplicate",
+    "records": {
+      "payment": [
+        "PAY_00161",
+        "PAY_00162"
+      ],
+      "settlement": [
+        "STL_00139"
+      ],
+      "order": [
+        "ORD_00155"
+      ]
+    },
+    "expected_status": "DUPLICATE",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00161",
+        "settlement": "STL_00139"
+      }
+    ],
+    "duplicate_of": {
+      "PAY_00162": "PAY_00161"
+    },
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00153",
+    "anomaly_type": "exact_match",
+    "records": {
+      "payment": [
+        "PAY_00163"
+      ],
+      "settlement": [
+        "STL_00140"
+      ],
+      "order": [
+        "ORD_00156"
+      ]
+    },
+    "expected_status": "MATCH",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00163",
+        "settlement": "STL_00140"
+      }
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00154",
+    "anomaly_type": "date_shift",
+    "records": {
+      "payment": [
+        "PAY_00164"
+      ],
+      "settlement": [
+        "STL_00141"
+      ],
+      "order": [
+        "ORD_00157"
+      ]
+    },
+    "expected_status": "MATCH",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00164",
+        "settlement": "STL_00141"
+      }
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00155",
+    "anomaly_type": "fee_adjusted",
+    "records": {
+      "payment": [
+        "PAY_00165"
+      ],
+      "settlement": [
+        "STL_00142"
+      ],
+      "order": [
+        "ORD_00158"
+      ]
+    },
+    "expected_status": "PARTIAL_MATCH",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00165",
+        "settlement": "STL_00142"
+      }
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00156",
+    "anomaly_type": "fee_adjusted",
+    "records": {
+      "payment": [
+        "PAY_00166"
+      ],
+      "settlement": [
+        "STL_00143"
+      ],
+      "order": [
+        "ORD_00159"
+      ]
+    },
+    "expected_status": "PARTIAL_MATCH",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00166",
+        "settlement": "STL_00143"
+      }
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00157",
+    "anomaly_type": "exact_match",
+    "records": {
+      "payment": [
+        "PAY_00167"
+      ],
+      "settlement": [
+        "STL_00144"
+      ],
+      "order": [
+        "ORD_00160"
+      ]
+    },
+    "expected_status": "MATCH",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00167",
+        "settlement": "STL_00144"
+      }
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00158",
+    "anomaly_type": "fee_adjusted",
+    "records": {
+      "payment": [
+        "PAY_00168"
+      ],
+      "settlement": [
+        "STL_00145"
+      ],
+      "order": [
+        "ORD_00161"
+      ]
+    },
+    "expected_status": "PARTIAL_MATCH",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00168",
+        "settlement": "STL_00145"
+      }
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00159",
+    "anomaly_type": "ambiguous",
+    "records": {
+      "payment": [
+        "PAY_00169",
+        "PAY_00170"
+      ],
+      "settlement": [
+        "STL_00146"
+      ],
+      "order": [
+        "ORD_00162",
+        "ORD_00163"
+      ]
+    },
+    "expected_status": "AMBIGUOUS",
+    "expected_pairs": [],
+    "candidates": [
+      "PAY_00169",
+      "PAY_00170"
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00160",
+    "anomaly_type": "unrelated",
+    "records": {
+      "payment": [
+        "PAY_00171"
+      ],
+      "settlement": [
+        "STL_00147"
+      ],
+      "order": [
+        "ORD_00164"
+      ]
+    },
+    "expected_status": "UNRESOLVED",
+    "expected_pairs": [],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00161",
+    "anomaly_type": "fee_adjusted",
+    "records": {
+      "payment": [
+        "PAY_00172"
+      ],
+      "settlement": [
+        "STL_00148"
+      ],
+      "order": [
+        "ORD_00166"
+      ]
+    },
+    "expected_status": "PARTIAL_MATCH",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00172",
+        "settlement": "STL_00148"
+      }
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00162",
+    "anomaly_type": "ambiguous",
+    "records": {
+      "payment": [
+        "PAY_00173",
+        "PAY_00174"
+      ],
+      "settlement": [
+        "STL_00149"
+      ],
+      "order": [
+        "ORD_00167",
+        "ORD_00168"
+      ]
+    },
+    "expected_status": "AMBIGUOUS",
+    "expected_pairs": [],
+    "candidates": [
+      "PAY_00173",
+      "PAY_00174"
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00164",
+    "anomaly_type": "partial_settlement",
+    "records": {
+      "payment": [
+        "PAY_00176"
+      ],
+      "settlement": [
+        "STL_00151"
+      ],
+      "order": [
+        "ORD_00170"
+      ]
+    },
+    "expected_status": "CONFLICT",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00176",
+        "settlement": "STL_00151"
+      }
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00165",
+    "anomaly_type": "fee_adjusted",
+    "records": {
+      "payment": [
+        "PAY_00177"
+      ],
+      "settlement": [
+        "STL_00152"
+      ],
+      "order": [
+        "ORD_00171"
+      ]
+    },
+    "expected_status": "PARTIAL_MATCH",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00177",
+        "settlement": "STL_00152"
+      }
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00166",
+    "anomaly_type": "ambiguous",
+    "records": {
+      "payment": [
+        "PAY_00178",
+        "PAY_00179"
+      ],
+      "settlement": [
+        "STL_00153"
+      ],
+      "order": [
+        "ORD_00172",
+        "ORD_00173"
+      ]
+    },
+    "expected_status": "AMBIGUOUS",
+    "expected_pairs": [],
+    "candidates": [
+      "PAY_00178",
+      "PAY_00179"
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00168",
+    "anomaly_type": "exact_match",
+    "records": {
+      "payment": [
+        "PAY_00181"
+      ],
+      "settlement": [
+        "STL_00155"
+      ],
+      "order": [
+        "ORD_00175"
+      ]
+    },
+    "expected_status": "MATCH",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00181",
+        "settlement": "STL_00155"
+      }
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00169",
+    "anomaly_type": "date_shift",
+    "records": {
+      "payment": [
+        "PAY_00182"
+      ],
+      "settlement": [
+        "STL_00156"
+      ],
+      "order": [
+        "ORD_00176"
+      ]
+    },
+    "expected_status": "MATCH",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00182",
+        "settlement": "STL_00156"
+      }
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00170",
+    "anomaly_type": "refund",
+    "records": {
+      "payment": [
+        "PAY_00183"
+      ],
+      "settlement": [
+        "STL_00157"
+      ],
+      "order": [
+        "ORD_00177"
+      ]
+    },
+    "expected_status": "REFUND",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00183",
+        "settlement": "STL_00157"
+      }
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00171",
+    "anomaly_type": "duplicate",
+    "records": {
+      "payment": [
+        "PAY_00184",
+        "PAY_00185"
+      ],
+      "settlement": [
+        "STL_00158"
+      ],
+      "order": [
+        "ORD_00178"
+      ]
+    },
+    "expected_status": "DUPLICATE",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00184",
+        "settlement": "STL_00158"
+      }
+    ],
+    "duplicate_of": {
+      "PAY_00185": "PAY_00184"
+    },
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00174",
+    "anomaly_type": "unrelated",
+    "records": {
+      "payment": [
+        "PAY_00188"
+      ],
+      "settlement": [
+        "STL_00161"
+      ],
+      "order": [
+        "ORD_00181"
+      ]
+    },
+    "expected_status": "UNRESOLVED",
+    "expected_pairs": [],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00175",
+    "anomaly_type": "partial_settlement",
+    "records": {
+      "payment": [
+        "PAY_00189"
+      ],
+      "settlement": [
+        "STL_00162"
+      ],
+      "order": [
+        "ORD_00183"
+      ]
+    },
+    "expected_status": "CONFLICT",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00189",
+        "settlement": "STL_00162"
+      }
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00177",
+    "anomaly_type": "missing_payment",
+    "records": {
+      "payment": [],
+      "settlement": [
+        "STL_00164"
+      ],
+      "order": []
+    },
+    "expected_status": "MISSING",
+    "expected_pairs": [],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00179",
+    "anomaly_type": "refund",
+    "records": {
+      "payment": [
+        "PAY_00192"
+      ],
+      "settlement": [
+        "STL_00166"
+      ],
+      "order": [
+        "ORD_00187"
+      ]
+    },
+    "expected_status": "REFUND",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00192",
+        "settlement": "STL_00166"
+      }
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00180",
+    "anomaly_type": "missing_settlement",
+    "records": {
+      "payment": [
+        "PAY_00193"
+      ],
+      "settlement": [],
+      "order": [
+        "ORD_00188"
+      ]
+    },
+    "expected_status": "MISSING",
+    "expected_pairs": [],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00183",
+    "anomaly_type": "exact_match",
+    "records": {
+      "payment": [
+        "PAY_00196"
+      ],
+      "settlement": [
+        "STL_00169"
+      ],
+      "order": [
+        "ORD_00191"
+      ]
+    },
+    "expected_status": "MATCH",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00196",
+        "settlement": "STL_00169"
+      }
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00184",
+    "anomaly_type": "exact_match",
+    "records": {
+      "payment": [
+        "PAY_00197"
+      ],
+      "settlement": [
+        "STL_00170"
+      ],
+      "order": [
+        "ORD_00192"
+      ]
+    },
+    "expected_status": "MATCH",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00197",
+        "settlement": "STL_00170"
+      }
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00185",
+    "anomaly_type": "exact_match",
+    "records": {
+      "payment": [
+        "PAY_00198"
+      ],
+      "settlement": [
+        "STL_00171"
+      ],
+      "order": [
+        "ORD_00193"
+      ]
+    },
+    "expected_status": "MATCH",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00198",
+        "settlement": "STL_00171"
+      }
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00187",
+    "anomaly_type": "refund",
+    "records": {
+      "payment": [
+        "PAY_00200"
+      ],
+      "settlement": [
+        "STL_00173"
+      ],
+      "order": [
+        "ORD_00195"
+      ]
+    },
+    "expected_status": "REFUND",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00200",
+        "settlement": "STL_00173"
+      }
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00188",
+    "anomaly_type": "exact_match",
+    "records": {
+      "payment": [
+        "PAY_00201"
+      ],
+      "settlement": [
+        "STL_00174"
+      ],
+      "order": [
+        "ORD_00196"
+      ]
+    },
+    "expected_status": "MATCH",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00201",
+        "settlement": "STL_00174"
+      }
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00190",
+    "anomaly_type": "partial_settlement",
+    "records": {
+      "payment": [
+        "PAY_00203"
+      ],
+      "settlement": [
+        "STL_00175"
+      ],
+      "order": [
+        "ORD_00198"
+      ]
+    },
+    "expected_status": "CONFLICT",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00203",
+        "settlement": "STL_00175"
+      }
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00191",
+    "anomaly_type": "exact_match",
+    "records": {
+      "payment": [
+        "PAY_00204"
+      ],
+      "settlement": [
+        "STL_00176"
+      ],
+      "order": [
+        "ORD_00199"
+      ]
+    },
+    "expected_status": "MATCH",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00204",
+        "settlement": "STL_00176"
+      }
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00193",
+    "anomaly_type": "exact_match",
+    "records": {
+      "payment": [
+        "PAY_00207"
+      ],
+      "settlement": [
+        "STL_00178"
+      ],
+      "order": [
+        "ORD_00202"
+      ]
+    },
+    "expected_status": "MATCH",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00207",
+        "settlement": "STL_00178"
+      }
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00195",
+    "anomaly_type": "date_shift",
+    "records": {
+      "payment": [
+        "PAY_00209"
+      ],
+      "settlement": [
+        "STL_00180"
+      ],
+      "order": [
+        "ORD_00204"
+      ]
+    },
+    "expected_status": "MATCH",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00209",
+        "settlement": "STL_00180"
+      }
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00196",
+    "anomaly_type": "date_shift",
+    "records": {
+      "payment": [
+        "PAY_00210"
+      ],
+      "settlement": [
+        "STL_00181"
+      ],
+      "order": [
+        "ORD_00205"
+      ]
+    },
+    "expected_status": "MATCH",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00210",
+        "settlement": "STL_00181"
+      }
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00198",
+    "anomaly_type": "exact_match",
+    "records": {
+      "payment": [
+        "PAY_00213"
+      ],
+      "settlement": [
+        "STL_00183"
+      ],
+      "order": [
+        "ORD_00208"
+      ]
+    },
+    "expected_status": "MATCH",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00213",
+        "settlement": "STL_00183"
+      }
+    ],
+    "split": "dev"
+  },
+  {
+    "event_id": "EVT_00199",
+    "anomaly_type": "exact_match",
+    "records": {
+      "payment": [
+        "PAY_00214"
+      ],
+      "settlement": [
+        "STL_00184"
+      ],
+      "order": [
+        "ORD_00209"
+      ]
+    },
+    "expected_status": "MATCH",
+    "expected_pairs": [
+      {
+        "payment": "PAY_00214",
+        "settlement": "STL_00184"
+      }
+    ],
+    "split": "dev"
+  }
+]

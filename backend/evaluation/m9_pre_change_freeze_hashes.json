@@ -1,0 +1,19 @@
+{
+  "config/m4_thresholds.json": "432410deac47eda8eae2117f7ae03d2f647c2796873d70a5e1a36d8e13f90da0",
+  "config/m6_policy.json": "ef41e361685a0c669bb6bca7f63af802205edf23c82946c0d1e0d4c68c92610c",
+  "src/audit.py": "778dee60b25004fe1218afccd55d71cfd0170d65397c9383326cdf3230b19e19",
+  "src/candidates.py": "f7f431444fd34fd5dc7cc2d07c4dedf63cd2e209b946ae36d3076631b1cbfb76",
+  "src/config.py": "1e9376673a97110e9b3099aa91033f1c5b45ef4bbd9dc176a71f8bf8c67f06d7",
+  "src/deterministic.py": "224bd40b095145a33690eb7789faedc9c36e950c0d719c3d6f18801c06480508",
+  "src/evaluation.py": "c22b028dc0a41108c7fe132cbbe2b285ae4aceef9ba5e9a4467b5ea3a52f0d7c",
+  "src/matching.py": "8bfe2b011c62573128c865964484296e78b7ef65cdfe910cc289c267cbac27ce",
+  "src/models.py": "9724a2181d2f1273c5fd63bf46767b5598e6f7cf53e0d303af8db738aecd4d6c",
+  "src/normalization.py": "89a4758c5893ab54ae4bd4e3eeed1e334849a4aa340279e400124c9c39d8bf84",
+  "src/policy.py": "6ef5c7a9e90404248309249e36479f2d765081e565bc3527b677f34fb49c39fd",
+  "src/scoring.py": "9f4005ef90de5d9d1128359cdae4df84d11b958358bf8230f1dbea2630c197b7",
+  "tests/test_candidates.py": "4095211d04213e612143d2058b7753cf5bc940c145fe2800b91590f9ac90186c",
+  "tests/test_evaluation.py": "3b4018ebf2c130083ad48cd686f79742fad7371f059f8621a8643b5d23026e23",
+  "tests/test_m6_policy.py": "2f2be2f0e4ab3dd998fdd06428af6bffe7a9923ec5752c3a9822d5ceea49040d",
+  "tests/test_scoring.py": "85571cae71a43fa509c3d8bc4a933c56bf6a11a8da9df7a68d78767726000ce5",
+  "tests/test_stage2_deterministic.py": "af58829eca41329140a610032a0f17adcb26efb6b173cc28277b76e46cdff94c"
+}

@@ -1,0 +1,11 @@
+{
+  "scoring_version": "v1.0.0-M4-DEV",
+  "dataset_split": "DEV",
+  "acceptance_threshold": 0.75,
+  "minimum_margin": 0.10,
+  "feature_weights": {
+    "amount_weight": 0.50,
+    "date_weight": 0.15,
+    "reference_weight": 0.35
+  }
+}

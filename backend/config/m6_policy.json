@@ -1,0 +1,7 @@
+{
+  "policy_version": "v1.0.0-M6-DEV",
+  "ai_min_confidence": 0.80,
+  "ai_min_confidence_note": "Mirrors the floor src.m5_reasoning already enforces internally (confidence < 0.80 rejected); M6 re-checks it independently rather than trusting M5's own validation.",
+  "collision_margin": 0.10,
+  "collision_margin_note": "Reuses config/m4_thresholds.json:minimum_margin - not a second, competing threshold system. Kept as its own literal here (not a file reference) so this file alone documents the exact number M6 was locked and tested against."
+}

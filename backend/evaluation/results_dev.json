@@ -1,0 +1,248 @@
+{
+  "dataset": {
+    "payments": 129,
+    "settlements": 111,
+    "orders": 120,
+    "logical_events": 120
+  },
+  "full_controller": {
+    "headline": {
+      "total": 129,
+      "overall_correct": 129,
+      "overall_correct_rate": 1.0,
+      "match_rate": {
+        "matched": 93,
+        "total": 93,
+        "rate": 1.0,
+        "definition": "Of payments whose ground truth is a settlement-bearing status (MATCH/PARTIAL_MATCH/REFUND/CONFLICT), the fraction the controller resolved to the correct status AND correct settlement."
+      },
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "precision_recall_definition": "Computed over financial-resolution assertions (MATCH/PARTIAL_MATCH/REFUND/CONFLICT). TP = correct settlement-owning assertion. FP = a settlement-owning assertion that is wrong (wrong settlement, or asserted where none/a different class was expected) - the 'unjustified financial match' failure class. FN = ground truth expected a settlement-owning resolution but the system produced a different or no such resolution (including a safe abstention).",
+      "false_positives": {
+        "count": 0,
+        "rate": 0.0,
+        "payment_ids": []
+      },
+      "unresolved_rate": {
+        "count": 6,
+        "rate": 0.046511627906976744
+      },
+      "review_rate": {
+        "count": 18,
+        "rate": 0.13953488372093023
+      },
+      "ambiguous_rate": {
+        "count": 12,
+        "rate": 0.09302325581395349
+      },
+      "abstention": {
+        "correct_abstention_count": 18,
+        "wrong_abstention_count": 0,
+        "definition": "correct_abstention: ground truth was genuinely ambiguous/unrelated and the system safely refused to guess (counted as SUCCESS, not failure). wrong_abstention: ground truth expected a specific resolution but the system abstained instead - a missed automation opportunity, NOT a false positive, since no incorrect financial claim was made."
+      }
+    },
+    "event_level": {
+      "total_events": 120,
+      "correct_events": 120,
+      "event_match_rate": 1.0,
+      "incorrect_events": [],
+      "by_anomaly_type": {
+        "ambiguous": {
+          "total": 6,
+          "correct": 6,
+          "rate": 1.0
+        },
+        "date_shift": {
+          "total": 15,
+          "correct": 15,
+          "rate": 1.0
+        },
+        "duplicate": {
+          "total": 9,
+          "correct": 9,
+          "rate": 1.0
+        },
+        "exact_match": {
+          "total": 36,
+          "correct": 36,
+          "rate": 1.0
+        },
+        "fee_adjusted": {
+          "total": 15,
+          "correct": 15,
+          "rate": 1.0
+        },
+        "missing_payment": {
+          "total": 6,
+          "correct": 6,
+          "rate": 1.0
+        },
+        "missing_settlement": {
+          "total": 9,
+          "correct": 9,
+          "rate": 1.0
+        },
+        "partial_settlement": {
+          "total": 9,
+          "correct": 9,
+          "rate": 1.0
+        },
+        "refund": {
+          "total": 9,
+          "correct": 9,
+          "rate": 1.0
+        },
+        "unrelated": {
+          "total": 6,
+          "correct": 6,
+          "rate": 1.0
+        }
+      }
+    },
+    "safe_automation_rate": {
+      "safe_automated": 111,
+      "total": 129,
+      "rate": 0.8604651162790697,
+      "ownership_invariant_violations": [],
+      "definition": "final non-review decision AND correct AND does not double-own a settlement"
+    },
+    "deterministic_and_ai_rates": {
+      "deterministic_resolution_rate": {
+        "count": 129,
+        "total": 129,
+        "rate": 1.0
+      },
+      "ai_invocation_rate": {
+        "invocations": 0,
+        "eligible_residual_records": 13,
+        "rate": 0.0,
+        "m5_available": false,
+        "note": "M5 runtime evaluation was unavailable in this environment (pydantic not installed, no network access); all AI-eligible residual records fell back to safe status preservation instead of a real AI decision. This is NOT evidence of AI performance - it is the honestly-reported absence of an AI run."
+      }
+    },
+    "audit_coverage": {
+      "total_final_decisions": 129,
+      "decisions_with_audit_evidence": 129,
+      "audit_coverage_pct": 100.0
+    },
+    "throughput": {
+      "payments_processed": 129,
+      "settlements_processed": 111,
+      "total_decisions": 129,
+      "execution_seconds": 0.0025990949999936674,
+      "records_per_second": 49632.660599291026,
+      "caveat": "Single small-dataset run (129 payments); not a reliable throughput estimate at production scale - reported for reference only."
+    },
+    "per_class_metrics": {
+      "AMBIGUOUS": {
+        "support": 12,
+        "tp": 12,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "CONFLICT": {
+        "support": 9,
+        "tp": 9,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "DUPLICATE": {
+        "support": 9,
+        "tp": 9,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "MATCH": {
+        "support": 60,
+        "tp": 60,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "MISSING": {
+        "support": 9,
+        "tp": 9,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "PARTIAL_MATCH": {
+        "support": 15,
+        "tp": 15,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "REFUND": {
+        "support": 9,
+        "tp": 9,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "UNRESOLVED": {
+        "support": 6,
+        "tp": 6,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    }
+  },
+  "baseline": {
+    "match_rate": 0.6451612903225806,
+    "precision": 0.6451612903225806,
+    "recall": 0.6451612903225806,
+    "false_positives": 33,
+    "unresolved_rate": 0.27906976744186046,
+    "overall_correct_rate": 0.6046511627906976
+  },
+  "determinism": {
+    "row_shuffle_trials": 5,
+    "all_identical": true
+  },
+  "idempotency": {
+    "identical": true
+  },
+  "exceptions": {
+    "count": 36,
+    "by_category": {
+      "no_candidate": 5,
+      "duplicate": 9,
+      "missing_settlement_or_payment": 9,
+      "ai_unavailable": 13
+    }
+  },
+  "regression_tests": {
+    "pre_m7": {
+      "passed": 93,
+      "failed": 0
+    },
+    "post_m7": {
+      "passed": 93,
+      "failed": 0
+    }
+  },
+  "holdout_accessed": false
+}

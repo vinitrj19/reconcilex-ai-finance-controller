@@ -1,0 +1,1034 @@
+{
+  "PAY_00001": {
+    "payment_id": "PAY_00001",
+    "settlement_id": "STL_00001",
+    "status": "MATCH",
+    "confidence": null,
+    "decision_source": "M1_EXACT_MATCH",
+    "reason": "Strong identity match locked in by M1; not revisited by M6."
+  },
+  "PAY_00005": {
+    "payment_id": "PAY_00005",
+    "settlement_id": null,
+    "status": "UNRESOLVED",
+    "confidence": null,
+    "decision_source": "M2_DETERMINISTIC",
+    "reason": "Unresolved: payment.order_id='ORD_00006' does not resolve to any known order, and no settlement directly references this payment. Relationship cannot be safely established."
+  },
+  "PAY_00006": {
+    "payment_id": "PAY_00006",
+    "settlement_id": "STL_00005",
+    "status": "MATCH",
+    "confidence": null,
+    "decision_source": "M1_EXACT_MATCH",
+    "reason": "Strong identity match locked in by M1; not revisited by M6."
+  },
+  "PAY_00007": {
+    "payment_id": "PAY_00007",
+    "settlement_id": null,
+    "status": "DUPLICATE",
+    "confidence": null,
+    "decision_source": "M2_DETERMINISTIC",
+    "reason": "Duplicate of payment PAY_00006: same order/customer and amount within the duplicate detection window."
+  },
+  "PAY_00010": {
+    "payment_id": "PAY_00010",
+    "settlement_id": "STL_00007",
+    "status": "MATCH",
+    "confidence": null,
+    "decision_source": "M1_EXACT_MATCH",
+    "reason": "Strong identity match locked in by M1; not revisited by M6."
+  },
+  "PAY_00011": {
+    "payment_id": "PAY_00011",
+    "settlement_id": "STL_00008",
+    "status": "MATCH",
+    "confidence": null,
+    "decision_source": "M1_EXACT_MATCH",
+    "reason": "Strong identity match locked in by M1; not revisited by M6."
+  },
+  "PAY_00012": {
+    "payment_id": "PAY_00012",
+    "settlement_id": "STL_00009",
+    "status": "MATCH",
+    "confidence": null,
+    "decision_source": "M1_EXACT_MATCH",
+    "reason": "Strong identity match locked in by M1; not revisited by M6."
+  },
+  "PAY_00015": {
+    "payment_id": "PAY_00015",
+    "settlement_id": "STL_00011",
+    "status": "CONFLICT",
+    "confidence": null,
+    "decision_source": "M2_DETERMINISTIC",
+    "reason": "Conflict: shortfall 480.72 against settlement STL_00011 is not explained by the fee/GST band and is not a refund - material unexplained discrepancy."
+  },
+  "PAY_00016": {
+    "payment_id": "PAY_00016",
+    "settlement_id": null,
+    "status": "MISSING",
+    "confidence": null,
+    "decision_source": "M2_DETERMINISTIC",
+    "reason": "Missing: no directly-referenced or amount/date-plausible settlement candidate found."
+  },
+  "PAY_00018": {
+    "payment_id": "PAY_00018",
+    "settlement_id": "STL_00013",
+    "status": "REFUND",
+    "confidence": null,
+    "decision_source": "M2_DETERMINISTIC",
+    "reason": "Corroborated refund: payment_status='refunded', settlement STL_00013 status='refunded'/net_amount=-16150.77, order_status='completed'."
+  },
+  "PAY_00019": {
+    "payment_id": "PAY_00019",
+    "settlement_id": "STL_00014",
+    "status": "CONFLICT",
+    "confidence": null,
+    "decision_source": "M2_DETERMINISTIC",
+    "reason": "Conflict: shortfall 2729.83 against settlement STL_00014 is not explained by the fee/GST band and is not a refund - material unexplained discrepancy."
+  },
+  "PAY_00021": {
+    "payment_id": "PAY_00021",
+    "settlement_id": null,
+    "status": "MISSING",
+    "confidence": null,
+    "decision_source": "M2_DETERMINISTIC",
+    "reason": "Missing: no directly-referenced or amount/date-plausible settlement candidate found."
+  },
+  "PAY_00022": {
+    "payment_id": "PAY_00022",
+    "settlement_id": "STL_00016",
+    "status": "MATCH",
+    "confidence": null,
+    "decision_source": "M1_EXACT_MATCH",
+    "reason": "Strong identity match locked in by M1; not revisited by M6."
+  },
+  "PAY_00023": {
+    "payment_id": "PAY_00023",
+    "settlement_id": "STL_00017",
+    "status": "MATCH",
+    "confidence": null,
+    "decision_source": "M1_EXACT_MATCH",
+    "reason": "Strong identity match locked in by M1; not revisited by M6."
+  },
+  "PAY_00025": {
+    "payment_id": "PAY_00025",
+    "settlement_id": "STL_00019",
+    "status": "MATCH",
+    "confidence": null,
+    "decision_source": "M1_EXACT_MATCH",
+    "reason": "Strong identity match locked in by M1; not revisited by M6."
+  },
+  "PAY_00027": {
+    "payment_id": "PAY_00027",
+    "settlement_id": null,
+    "status": "MISSING",
+    "confidence": null,
+    "decision_source": "M2_DETERMINISTIC",
+    "reason": "Missing: no directly-referenced or amount/date-plausible settlement candidate found."
+  },
+  "PAY_00032": {
+    "payment_id": "PAY_00032",
+    "settlement_id": "STL_00024",
+    "status": "MATCH",
+    "confidence": null,
+    "decision_source": "M1_EXACT_MATCH",
+    "reason": "Strong identity match locked in by M1; not revisited by M6."
+  },
+  "PAY_00033": {
+    "payment_id": "PAY_00033",
+    "settlement_id": null,
+    "status": "DUPLICATE",
+    "confidence": null,
+    "decision_source": "M2_DETERMINISTIC",
+    "reason": "Duplicate of payment PAY_00032: same order/customer and amount within the duplicate detection window."
+  },
+  "PAY_00034": {
+    "payment_id": "PAY_00034",
+    "settlement_id": "STL_00025",
+    "status": "MATCH",
+    "confidence": null,
+    "decision_source": "M1_EXACT_MATCH",
+    "reason": "Strong identity match locked in by M1; not revisited by M6."
+  },
+  "PAY_00035": {
+    "payment_id": "PAY_00035",
+    "settlement_id": null,
+    "status": "UNRESOLVED",
+    "confidence": null,
+    "decision_source": "M2_DETERMINISTIC",
+    "reason": "Unresolved: payment.order_id='ORD_00034' does not resolve to any known order, and no settlement directly references this payment. Relationship cannot be safely established."
+  },
+  "PAY_00039": {
+    "payment_id": "PAY_00039",
+    "settlement_id": "STL_00029",
+    "status": "MATCH",
+    "confidence": null,
+    "decision_source": "M1_EXACT_MATCH",
+    "reason": "Strong identity match locked in by M1; not revisited by M6."
+  },
+  "PAY_00041": {
+    "payment_id": "PAY_00041",
+    "settlement_id": "STL_00031",
+    "status": "REFUND",
+    "confidence": null,
+    "decision_source": "M2_DETERMINISTIC",
+    "reason": "Corroborated refund: payment_status='refunded', settlement STL_00031 status='refunded'/net_amount=-33943.55, order_status='completed'."
+  },
+  "PAY_00042": {
+    "payment_id": "PAY_00042",
+    "settlement_id": "STL_00032",
+    "status": "MATCH",
+    "confidence": null,
+    "decision_source": "M1_EXACT_MATCH",
+    "reason": "Strong identity match locked in by M1; not revisited by M6."
+  },
+  "PAY_00043": {
+    "payment_id": "PAY_00043",
+    "settlement_id": "STL_00033",
+    "status": "MATCH",
+    "confidence": null,
+    "decision_source": "M1_EXACT_MATCH",
+    "reason": "Strong identity match locked in by M1; not revisited by M6."
+  },
+  "PAY_00044": {
+    "payment_id": "PAY_00044",
+    "settlement_id": null,
+    "status": "UNRESOLVED",
+    "confidence": null,
+    "decision_source": "M2_DETERMINISTIC",
+    "reason": "Unresolved: payment.order_id='ORD_00043' does not resolve to any known order, and no settlement directly references this payment. Relationship cannot be safely established."
+  },
+  "PAY_00045": {
+    "payment_id": "PAY_00045",
+    "settlement_id": "STL_00035",
+    "status": "MATCH",
+    "confidence": null,
+    "decision_source": "M1_EXACT_MATCH",
+    "reason": "Strong identity match locked in by M1; not revisited by M6."
+  },
+  "PAY_00046": {
+    "payment_id": "PAY_00046",
+    "settlement_id": "STL_00036",
+    "status": "CONFLICT",
+    "confidence": null,
+    "decision_source": "M2_DETERMINISTIC",
+    "reason": "Conflict: shortfall 2506.52 against settlement STL_00036 is not explained by the fee/GST band and is not a refund - material unexplained discrepancy."
+  },
+  "PAY_00047": {
+    "payment_id": "PAY_00047",
+    "settlement_id": "STL_00037",
+    "status": "CONFLICT",
+    "confidence": null,
+    "decision_source": "M2_DETERMINISTIC",
+    "reason": "Conflict: shortfall 4759.67 against settlement STL_00037 is not explained by the fee/GST band and is not a refund - material unexplained discrepancy."
+  },
+  "PAY_00048": {
+    "payment_id": "PAY_00048",
+    "settlement_id": "STL_00038",
+    "status": "MATCH",
+    "confidence": null,
+    "decision_source": "M1_EXACT_MATCH",
+    "reason": "Strong identity match locked in by M1; not revisited by M6."
+  },
+  "PAY_00049": {
+    "payment_id": "PAY_00049",
+    "settlement_id": "STL_00039",
+    "status": "MATCH",
+    "confidence": null,
+    "decision_source": "M1_EXACT_MATCH",
+    "reason": "Strong identity match locked in by M1; not revisited by M6."
+  },
+  "PAY_00052": {
+    "payment_id": "PAY_00052",
+    "settlement_id": null,
+    "status": "MISSING",
+    "confidence": null,
+    "decision_source": "M2_DETERMINISTIC",
+    "reason": "Missing: no directly-referenced or amount/date-plausible settlement candidate found."
+  },
+  "PAY_00054": {
+    "payment_id": "PAY_00054",
+    "settlement_id": "STL_00044",
+    "status": "MATCH",
+    "confidence": null,
+    "decision_source": "M1_EXACT_MATCH",
+    "reason": "Strong identity match locked in by M1; not revisited by M6."
+  },
+  "PAY_00055": {
+    "payment_id": "PAY_00055",
+    "settlement_id": "STL_00045",
+    "status": "MATCH",
+    "confidence": null,
+    "decision_source": "M1_EXACT_MATCH",
+    "reason": "Strong identity match locked in by M1; not revisited by M6."
+  },
+  "PAY_00056": {
+    "payment_id": "PAY_00056",
+    "settlement_id": null,
+    "status": "DUPLICATE",
+    "confidence": null,
+    "decision_source": "M2_DETERMINISTIC",
+    "reason": "Duplicate of payment PAY_00055: same order/customer and amount within the duplicate detection window."
+  },
+  "PAY_00058": {
+    "payment_id": "PAY_00058",
+    "settlement_id": "STL_00047",
+    "status": "PARTIAL_MATCH",
+    "confidence": null,
+    "decision_source": "M2_DETERMINISTIC",
+    "reason": "Partial match: shortfall 999.20 against settlement STL_00047 is within the plausible fee (1.500-3.000%) + GST (18.00%) band."
+  },
+  "PAY_00061": {
+    "payment_id": "PAY_00061",
+    "settlement_id": "STL_00051",
+    "status": "MATCH",
+    "confidence": null,
+    "decision_source": "M1_EXACT_MATCH",
+    "reason": "Strong identity match locked in by M1; not revisited by M6."
+  },
+  "PAY_00063": {
+    "payment_id": "PAY_00063",
+    "settlement_id": null,
+    "status": "UNRESOLVED",
+    "confidence": null,
+    "decision_source": "M2_DETERMINISTIC",
+    "reason": "Unresolved: payment.order_id='ORD_00062' does not resolve to any known order, and no settlement directly references this payment. Relationship cannot be safely established."
+  },
+  "PAY_00064": {
+    "payment_id": "PAY_00064",
+    "settlement_id": "STL_00054",
+    "status": "MATCH",
+    "confidence": null,
+    "decision_source": "M1_EXACT_MATCH",
+    "reason": "Strong identity match locked in by M1; not revisited by M6."
+  },
+  "PAY_00068": {
+    "payment_id": "PAY_00068",
+    "settlement_id": "STL_00058",
+    "status": "REFUND",
+    "confidence": null,
+    "decision_source": "M2_DETERMINISTIC",
+    "reason": "Corroborated refund: payment_status='refunded', settlement STL_00058 status='refunded'/net_amount=-23926.39, order_status='completed'."
+  },
+  "PAY_00072": {
+    "payment_id": "PAY_00072",
+    "settlement_id": "STL_00061",
+    "status": "MATCH",
+    "confidence": null,
+    "decision_source": "M1_EXACT_MATCH",
+    "reason": "Strong identity match locked in by M1; not revisited by M6."
+  },
+  "PAY_00073": {
+    "payment_id": "PAY_00073",
+    "settlement_id": null,
+    "status": "DUPLICATE",
+    "confidence": null,
+    "decision_source": "M2_DETERMINISTIC",
+    "reason": "Duplicate of payment PAY_00072: same order/customer and amount within the duplicate detection window."
+  },
+  "PAY_00074": {
+    "payment_id": "PAY_00074",
+    "settlement_id": "STL_00062",
+    "status": "MATCH",
+    "confidence": null,
+    "decision_source": "M1_EXACT_MATCH",
+    "reason": "Strong identity match locked in by M1; not revisited by M6."
+  },
+  "PAY_00075": {
+    "payment_id": "PAY_00075",
+    "settlement_id": "STL_00063",
+    "status": "MATCH",
+    "confidence": null,
+    "decision_source": "M1_EXACT_MATCH",
+    "reason": "Strong identity match locked in by M1; not revisited by M6."
+  },
+  "PAY_00078": {
+    "payment_id": "PAY_00078",
+    "settlement_id": "STL_00067",
+    "status": "MATCH",
+    "confidence": null,
+    "decision_source": "M1_EXACT_MATCH",
+    "reason": "Strong identity match locked in by M1; not revisited by M6."
+  },
+  "PAY_00080": {
+    "payment_id": "PAY_00080",
+    "settlement_id": "STL_00069",
+    "status": "CONFLICT",
+    "confidence": null,
+    "decision_source": "M2_DETERMINISTIC",
+    "reason": "Conflict: shortfall 5735.33 against settlement STL_00069 is not explained by the fee/GST band and is not a refund - material unexplained discrepancy."
+  },
+  "PAY_00086": {
+    "payment_id": "PAY_00086",
+    "settlement_id": "STL_00075",
+    "status": "PARTIAL_MATCH",
+    "confidence": null,
+    "decision_source": "M2_DETERMINISTIC",
+    "reason": "Partial match: shortfall 1118.26 against settlement STL_00075 is within the plausible fee (1.500-3.000%) + GST (18.00%) band."
+  },
+  "PAY_00087": {
+    "payment_id": "PAY_00087",
+    "settlement_id": "STL_00076",
+    "status": "MATCH",
+    "confidence": null,
+    "decision_source": "M1_EXACT_MATCH",
+    "reason": "Strong identity match locked in by M1; not revisited by M6."
+  },
+  "PAY_00088": {
+    "payment_id": "PAY_00088",
+    "settlement_id": null,
+    "status": "DUPLICATE",
+    "confidence": null,
+    "decision_source": "M2_DETERMINISTIC",
+    "reason": "Duplicate of payment PAY_00087: same order/customer and amount within the duplicate detection window."
+  },
+  "PAY_00090": {
+    "payment_id": "PAY_00090",
+    "settlement_id": null,
+    "status": "MISSING",
+    "confidence": null,
+    "decision_source": "M2_DETERMINISTIC",
+    "reason": "Missing: no directly-referenced or amount/date-plausible settlement candidate found."
+  },
+  "PAY_00091": {
+    "payment_id": "PAY_00091",
+    "settlement_id": "STL_00079",
+    "status": "MATCH",
+    "confidence": null,
+    "decision_source": "M1_EXACT_MATCH",
+    "reason": "Strong identity match locked in by M1; not revisited by M6."
+  },
+  "PAY_00092": {
+    "payment_id": "PAY_00092",
+    "settlement_id": "STL_00080",
+    "status": "MATCH",
+    "confidence": null,
+    "decision_source": "M1_EXACT_MATCH",
+    "reason": "Strong identity match locked in by M1; not revisited by M6."
+  },
+  "PAY_00096": {
+    "payment_id": "PAY_00096",
+    "settlement_id": "STL_00084",
+    "status": "MATCH",
+    "confidence": null,
+    "decision_source": "M1_EXACT_MATCH",
+    "reason": "Strong identity match locked in by M1; not revisited by M6."
+  },
+  "PAY_00099": {
+    "payment_id": "PAY_00099",
+    "settlement_id": "STL_00088",
+    "status": "REFUND",
+    "confidence": null,
+    "decision_source": "M2_DETERMINISTIC",
+    "reason": "Corroborated refund: payment_status='refunded', settlement STL_00088 status='refunded'/net_amount=-31351.34, order_status='completed'."
+  },
+  "PAY_00100": {
+    "payment_id": "PAY_00100",
+    "settlement_id": "STL_00089",
+    "status": "MATCH",
+    "confidence": null,
+    "decision_source": "M1_EXACT_MATCH",
+    "reason": "Strong identity match locked in by M1; not revisited by M6."
+  },
+  "PAY_00101": {
+    "payment_id": "PAY_00101",
+    "settlement_id": "STL_00090",
+    "status": "MATCH",
+    "confidence": null,
+    "decision_source": "M1_EXACT_MATCH",
+    "reason": "Strong identity match locked in by M1; not revisited by M6."
+  },
+  "PAY_00102": {
+    "payment_id": "PAY_00102",
+    "settlement_id": null,
+    "status": "AMBIGUOUS",
+    "confidence": null,
+    "decision_source": "M2_DETERMINISTIC",
+    "reason": "Ambiguous: settlement candidate(s) ['STL_00091'] cannot be safely assigned - contested by another payment with an equal claim, and no reference evidence exists to arbitrate."
+  },
+  "PAY_00103": {
+    "payment_id": "PAY_00103",
+    "settlement_id": null,
+    "status": "AMBIGUOUS",
+    "confidence": null,
+    "decision_source": "M2_DETERMINISTIC",
+    "reason": "Ambiguous: settlement candidate(s) ['STL_00091'] cannot be safely assigned - contested by another payment with an equal claim, and no reference evidence exists to arbitrate."
+  },
+  "PAY_00104": {
+    "payment_id": "PAY_00104",
+    "settlement_id": "STL_00092",
+    "status": "MATCH",
+    "confidence": null,
+    "decision_source": "M1_EXACT_MATCH",
+    "reason": "Strong identity match locked in by M1; not revisited by M6."
+  },
+  "PAY_00105": {
+    "payment_id": "PAY_00105",
+    "settlement_id": null,
+    "status": "DUPLICATE",
+    "confidence": null,
+    "decision_source": "M2_DETERMINISTIC",
+    "reason": "Duplicate of payment PAY_00104: same order/customer and amount within the duplicate detection window."
+  },
+  "PAY_00108": {
+    "payment_id": "PAY_00108",
+    "settlement_id": "STL_00095",
+    "status": "MATCH",
+    "confidence": null,
+    "decision_source": "M1_EXACT_MATCH",
+    "reason": "Strong identity match locked in by M1; not revisited by M6."
+  },
+  "PAY_00109": {
+    "payment_id": "PAY_00109",
+    "settlement_id": "STL_00096",
+    "status": "MATCH",
+    "confidence": null,
+    "decision_source": "M1_EXACT_MATCH",
+    "reason": "Strong identity match locked in by M1; not revisited by M6."
+  },
+  "PAY_00110": {
+    "payment_id": "PAY_00110",
+    "settlement_id": null,
+    "status": "AMBIGUOUS",
+    "confidence": null,
+    "decision_source": "M2_DETERMINISTIC",
+    "reason": "Ambiguous: settlement candidate(s) ['STL_00097'] cannot be safely assigned - contested by another payment with an equal claim, and no reference evidence exists to arbitrate."
+  },
+  "PAY_00111": {
+    "payment_id": "PAY_00111",
+    "settlement_id": null,
+    "status": "AMBIGUOUS",
+    "confidence": null,
+    "decision_source": "M2_DETERMINISTIC",
+    "reason": "Ambiguous: settlement candidate(s) ['STL_00097'] cannot be safely assigned - contested by another payment with an equal claim, and no reference evidence exists to arbitrate."
+  },
+  "PAY_00112": {
+    "payment_id": "PAY_00112",
+    "settlement_id": "STL_00098",
+    "status": "PARTIAL_MATCH",
+    "confidence": null,
+    "decision_source": "M2_DETERMINISTIC",
+    "reason": "Partial match: shortfall 732.07 against settlement STL_00098 is within the plausible fee (1.500-3.000%) + GST (18.00%) band."
+  },
+  "PAY_00113": {
+    "payment_id": "PAY_00113",
+    "settlement_id": "STL_00099",
+    "status": "PARTIAL_MATCH",
+    "confidence": null,
+    "decision_source": "M2_DETERMINISTIC",
+    "reason": "Partial match: shortfall 124.31 against settlement STL_00099 is within the plausible fee (1.500-3.000%) + GST (18.00%) band."
+  },
+  "PAY_00114": {
+    "payment_id": "PAY_00114",
+    "settlement_id": null,
+    "status": "MISSING",
+    "confidence": null,
+    "decision_source": "M2_DETERMINISTIC",
+    "reason": "Missing: no directly-referenced or amount/date-plausible settlement candidate found."
+  },
+  "PAY_00122": {
+    "payment_id": "PAY_00122",
+    "settlement_id": "STL_00104",
+    "status": "MATCH",
+    "confidence": null,
+    "decision_source": "M1_EXACT_MATCH",
+    "reason": "Strong identity match locked in by M1; not revisited by M6."
+  },
+  "PAY_00124": {
+    "payment_id": "PAY_00124",
+    "settlement_id": "STL_00106",
+    "status": "CONFLICT",
+    "confidence": null,
+    "decision_source": "M2_DETERMINISTIC",
+    "reason": "Conflict: shortfall 3686.31 against settlement STL_00106 is not explained by the fee/GST band and is not a refund - material unexplained discrepancy."
+  },
+  "PAY_00126": {
+    "payment_id": "PAY_00126",
+    "settlement_id": null,
+    "status": "MISSING",
+    "confidence": null,
+    "decision_source": "M2_DETERMINISTIC",
+    "reason": "Missing: no directly-referenced or amount/date-plausible settlement candidate found."
+  },
+  "PAY_00127": {
+    "payment_id": "PAY_00127",
+    "settlement_id": null,
+    "status": "MISSING",
+    "confidence": null,
+    "decision_source": "M2_DETERMINISTIC",
+    "reason": "Missing: no directly-referenced or amount/date-plausible settlement candidate found."
+  },
+  "PAY_00128": {
+    "payment_id": "PAY_00128",
+    "settlement_id": "STL_00108",
+    "status": "MATCH",
+    "confidence": null,
+    "decision_source": "M1_EXACT_MATCH",
+    "reason": "Strong identity match locked in by M1; not revisited by M6."
+  },
+  "PAY_00131": {
+    "payment_id": "PAY_00131",
+    "settlement_id": "STL_00111",
+    "status": "MATCH",
+    "confidence": null,
+    "decision_source": "M1_EXACT_MATCH",
+    "reason": "Strong identity match locked in by M1; not revisited by M6."
+  },
+  "PAY_00136": {
+    "payment_id": "PAY_00136",
+    "settlement_id": "STL_00115",
+    "status": "PARTIAL_MATCH",
+    "confidence": null,
+    "decision_source": "M2_DETERMINISTIC",
+    "reason": "Partial match: shortfall 1137.60 against settlement STL_00115 is within the plausible fee (1.500-3.000%) + GST (18.00%) band."
+  },
+  "PAY_00137": {
+    "payment_id": "PAY_00137",
+    "settlement_id": "STL_00116",
+    "status": "MATCH",
+    "confidence": null,
+    "decision_source": "M1_EXACT_MATCH",
+    "reason": "Strong identity match locked in by M1; not revisited by M6."
+  },
+  "PAY_00139": {
+    "payment_id": "PAY_00139",
+    "settlement_id": "STL_00118",
+    "status": "PARTIAL_MATCH",
+    "confidence": null,
+    "decision_source": "M2_DETERMINISTIC",
+    "reason": "Partial match: shortfall 165.05 against settlement STL_00118 is within the plausible fee (1.500-3.000%) + GST (18.00%) band."
+  },
+  "PAY_00140": {
+    "payment_id": "PAY_00140",
+    "settlement_id": "STL_00119",
+    "status": "PARTIAL_MATCH",
+    "confidence": null,
+    "decision_source": "M2_DETERMINISTIC",
+    "reason": "Partial match: shortfall 197.90 against settlement STL_00119 is within the plausible fee (1.500-3.000%) + GST (18.00%) band."
+  },
+  "PAY_00142": {
+    "payment_id": "PAY_00142",
+    "settlement_id": "STL_00121",
+    "status": "PARTIAL_MATCH",
+    "confidence": null,
+    "decision_source": "M2_DETERMINISTIC",
+    "reason": "Partial match: shortfall 235.03 against settlement STL_00121 is within the plausible fee (1.500-3.000%) + GST (18.00%) band."
+  },
+  "PAY_00143": {
+    "payment_id": "PAY_00143",
+    "settlement_id": "STL_00122",
+    "status": "MATCH",
+    "confidence": null,
+    "decision_source": "M1_EXACT_MATCH",
+    "reason": "Strong identity match locked in by M1; not revisited by M6."
+  },
+  "PAY_00144": {
+    "payment_id": "PAY_00144",
+    "settlement_id": null,
+    "status": "DUPLICATE",
+    "confidence": null,
+    "decision_source": "M2_DETERMINISTIC",
+    "reason": "Duplicate of payment PAY_00143: same order/customer and amount within the duplicate detection window."
+  },
+  "PAY_00146": {
+    "payment_id": "PAY_00146",
+    "settlement_id": "STL_00124",
+    "status": "REFUND",
+    "confidence": null,
+    "decision_source": "M2_DETERMINISTIC",
+    "reason": "Corroborated refund: payment_status='refunded', settlement STL_00124 status='refunded'/net_amount=-21780.72, order_status='completed'."
+  },
+  "PAY_00147": {
+    "payment_id": "PAY_00147",
+    "settlement_id": "STL_00125",
+    "status": "MATCH",
+    "confidence": null,
+    "decision_source": "M1_EXACT_MATCH",
+    "reason": "Strong identity match locked in by M1; not revisited by M6."
+  },
+  "PAY_00148": {
+    "payment_id": "PAY_00148",
+    "settlement_id": null,
+    "status": "AMBIGUOUS",
+    "confidence": null,
+    "decision_source": "M2_DETERMINISTIC",
+    "reason": "Ambiguous: settlement candidate(s) ['STL_00126'] cannot be safely assigned - contested by another payment with an equal claim, and no reference evidence exists to arbitrate."
+  },
+  "PAY_00149": {
+    "payment_id": "PAY_00149",
+    "settlement_id": null,
+    "status": "AMBIGUOUS",
+    "confidence": null,
+    "decision_source": "M2_DETERMINISTIC",
+    "reason": "Ambiguous: settlement candidate(s) ['STL_00126'] cannot be safely assigned - contested by another payment with an equal claim, and no reference evidence exists to arbitrate."
+  },
+  "PAY_00150": {
+    "payment_id": "PAY_00150",
+    "settlement_id": "STL_00128",
+    "status": "MATCH",
+    "confidence": null,
+    "decision_source": "M1_EXACT_MATCH",
+    "reason": "Strong identity match locked in by M1; not revisited by M6."
+  },
+  "PAY_00152": {
+    "payment_id": "PAY_00152",
+    "settlement_id": "STL_00130",
+    "status": "REFUND",
+    "confidence": null,
+    "decision_source": "M2_DETERMINISTIC",
+    "reason": "Corroborated refund: payment_status='refunded', settlement STL_00130 status='refunded'/net_amount=-22117.23, order_status='completed'."
+  },
+  "PAY_00153": {
+    "payment_id": "PAY_00153",
+    "settlement_id": "STL_00131",
+    "status": "MATCH",
+    "confidence": null,
+    "decision_source": "M1_EXACT_MATCH",
+    "reason": "Strong identity match locked in by M1; not revisited by M6."
+  },
+  "PAY_00155": {
+    "payment_id": "PAY_00155",
+    "settlement_id": "STL_00133",
+    "status": "PARTIAL_MATCH",
+    "confidence": null,
+    "decision_source": "M2_DETERMINISTIC",
+    "reason": "Partial match: shortfall 158.12 against settlement STL_00133 is within the plausible fee (1.500-3.000%) + GST (18.00%) band."
+  },
+  "PAY_00157": {
+    "payment_id": "PAY_00157",
+    "settlement_id": "STL_00136",
+    "status": "MATCH",
+    "confidence": null,
+    "decision_source": "M1_EXACT_MATCH",
+    "reason": "Strong identity match locked in by M1; not revisited by M6."
+  },
+  "PAY_00158": {
+    "payment_id": "PAY_00158",
+    "settlement_id": "STL_00137",
+    "status": "PARTIAL_MATCH",
+    "confidence": null,
+    "decision_source": "M2_DETERMINISTIC",
+    "reason": "Partial match: shortfall 68.75 against settlement STL_00137 is within the plausible fee (1.500-3.000%) + GST (18.00%) band."
+  },
+  "PAY_00159": {
+    "payment_id": "PAY_00159",
+    "settlement_id": "STL_00138",
+    "status": "MATCH",
+    "confidence": null,
+    "decision_source": "M1_EXACT_MATCH",
+    "reason": "Strong identity match locked in by M1; not revisited by M6."
+  },
+  "PAY_00161": {
+    "payment_id": "PAY_00161",
+    "settlement_id": "STL_00139",
+    "status": "MATCH",
+    "confidence": null,
+    "decision_source": "M1_EXACT_MATCH",
+    "reason": "Strong identity match locked in by M1; not revisited by M6."
+  },
+  "PAY_00162": {
+    "payment_id": "PAY_00162",
+    "settlement_id": null,
+    "status": "DUPLICATE",
+    "confidence": null,
+    "decision_source": "M2_DETERMINISTIC",
+    "reason": "Duplicate of payment PAY_00161: same order/customer and amount within the duplicate detection window."
+  },
+  "PAY_00163": {
+    "payment_id": "PAY_00163",
+    "settlement_id": "STL_00140",
+    "status": "MATCH",
+    "confidence": null,
+    "decision_source": "M1_EXACT_MATCH",
+    "reason": "Strong identity match locked in by M1; not revisited by M6."
+  },
+  "PAY_00164": {
+    "payment_id": "PAY_00164",
+    "settlement_id": "STL_00141",
+    "status": "MATCH",
+    "confidence": null,
+    "decision_source": "M1_EXACT_MATCH",
+    "reason": "Strong identity match locked in by M1; not revisited by M6."
+  },
+  "PAY_00165": {
+    "payment_id": "PAY_00165",
+    "settlement_id": "STL_00142",
+    "status": "PARTIAL_MATCH",
+    "confidence": null,
+    "decision_source": "M2_DETERMINISTIC",
+    "reason": "Partial match: shortfall 108.34 against settlement STL_00142 is within the plausible fee (1.500-3.000%) + GST (18.00%) band."
+  },
+  "PAY_00166": {
+    "payment_id": "PAY_00166",
+    "settlement_id": "STL_00143",
+    "status": "PARTIAL_MATCH",
+    "confidence": null,
+    "decision_source": "M2_DETERMINISTIC",
+    "reason": "Partial match: shortfall 729.91 against settlement STL_00143 is within the plausible fee (1.500-3.000%) + GST (18.00%) band."
+  },
+  "PAY_00167": {
+    "payment_id": "PAY_00167",
+    "settlement_id": "STL_00144",
+    "status": "MATCH",
+    "confidence": null,
+    "decision_source": "M1_EXACT_MATCH",
+    "reason": "Strong identity match locked in by M1; not revisited by M6."
+  },
+  "PAY_00168": {
+    "payment_id": "PAY_00168",
+    "settlement_id": "STL_00145",
+    "status": "PARTIAL_MATCH",
+    "confidence": null,
+    "decision_source": "M2_DETERMINISTIC",
+    "reason": "Partial match: shortfall 268.66 against settlement STL_00145 is within the plausible fee (1.500-3.000%) + GST (18.00%) band."
+  },
+  "PAY_00169": {
+    "payment_id": "PAY_00169",
+    "settlement_id": null,
+    "status": "AMBIGUOUS",
+    "confidence": null,
+    "decision_source": "M2_DETERMINISTIC",
+    "reason": "Ambiguous: settlement candidate(s) ['STL_00146'] cannot be safely assigned - contested by another payment with an equal claim, and no reference evidence exists to arbitrate."
+  },
+  "PAY_00170": {
+    "payment_id": "PAY_00170",
+    "settlement_id": null,
+    "status": "AMBIGUOUS",
+    "confidence": null,
+    "decision_source": "M2_DETERMINISTIC",
+    "reason": "Ambiguous: settlement candidate(s) ['STL_00146'] cannot be safely assigned - contested by another payment with an equal claim, and no reference evidence exists to arbitrate."
+  },
+  "PAY_00171": {
+    "payment_id": "PAY_00171",
+    "settlement_id": null,
+    "status": "UNRESOLVED",
+    "confidence": null,
+    "decision_source": "M2_DETERMINISTIC",
+    "reason": "Unresolved: payment.order_id='ORD_00165' does not resolve to any known order, and no settlement directly references this payment. Relationship cannot be safely established."
+  },
+  "PAY_00172": {
+    "payment_id": "PAY_00172",
+    "settlement_id": "STL_00148",
+    "status": "PARTIAL_MATCH",
+    "confidence": null,
+    "decision_source": "M2_DETERMINISTIC",
+    "reason": "Partial match: shortfall 631.38 against settlement STL_00148 is within the plausible fee (1.500-3.000%) + GST (18.00%) band."
+  },
+  "PAY_00173": {
+    "payment_id": "PAY_00173",
+    "settlement_id": null,
+    "status": "AMBIGUOUS",
+    "confidence": null,
+    "decision_source": "M2_DETERMINISTIC",
+    "reason": "Ambiguous: settlement candidate(s) ['STL_00149'] cannot be safely assigned - contested by another payment with an equal claim, and no reference evidence exists to arbitrate."
+  },
+  "PAY_00174": {
+    "payment_id": "PAY_00174",
+    "settlement_id": null,
+    "status": "AMBIGUOUS",
+    "confidence": null,
+    "decision_source": "M2_DETERMINISTIC",
+    "reason": "Ambiguous: settlement candidate(s) ['STL_00149'] cannot be safely assigned - contested by another payment with an equal claim, and no reference evidence exists to arbitrate."
+  },
+  "PAY_00176": {
+    "payment_id": "PAY_00176",
+    "settlement_id": "STL_00151",
+    "status": "CONFLICT",
+    "confidence": null,
+    "decision_source": "M2_DETERMINISTIC",
+    "reason": "Conflict: shortfall 4310.64 against settlement STL_00151 is not explained by the fee/GST band and is not a refund - material unexplained discrepancy."
+  },
+  "PAY_00177": {
+    "payment_id": "PAY_00177",
+    "settlement_id": "STL_00152",
+    "status": "PARTIAL_MATCH",
+    "confidence": null,
+    "decision_source": "M2_DETERMINISTIC",
+    "reason": "Partial match: shortfall 370.76 against settlement STL_00152 is within the plausible fee (1.500-3.000%) + GST (18.00%) band."
+  },
+  "PAY_00178": {
+    "payment_id": "PAY_00178",
+    "settlement_id": null,
+    "status": "AMBIGUOUS",
+    "confidence": null,
+    "decision_source": "M2_DETERMINISTIC",
+    "reason": "Ambiguous: settlement candidate(s) ['STL_00153'] cannot be safely assigned - contested by another payment with an equal claim, and no reference evidence exists to arbitrate."
+  },
+  "PAY_00179": {
+    "payment_id": "PAY_00179",
+    "settlement_id": null,
+    "status": "AMBIGUOUS",
+    "confidence": null,
+    "decision_source": "M2_DETERMINISTIC",
+    "reason": "Ambiguous: settlement candidate(s) ['STL_00153'] cannot be safely assigned - contested by another payment with an equal claim, and no reference evidence exists to arbitrate."
+  },
+  "PAY_00181": {
+    "payment_id": "PAY_00181",
+    "settlement_id": "STL_00155",
+    "status": "MATCH",
+    "confidence": null,
+    "decision_source": "M1_EXACT_MATCH",
+    "reason": "Strong identity match locked in by M1; not revisited by M6."
+  },
+  "PAY_00182": {
+    "payment_id": "PAY_00182",
+    "settlement_id": "STL_00156",
+    "status": "MATCH",
+    "confidence": null,
+    "decision_source": "M1_EXACT_MATCH",
+    "reason": "Strong identity match locked in by M1; not revisited by M6."
+  },
+  "PAY_00183": {
+    "payment_id": "PAY_00183",
+    "settlement_id": "STL_00157",
+    "status": "REFUND",
+    "confidence": null,
+    "decision_source": "M2_DETERMINISTIC",
+    "reason": "Corroborated refund: payment_status='refunded', settlement STL_00157 status='refunded'/net_amount=-14917.96, order_status='completed'."
+  },
+  "PAY_00184": {
+    "payment_id": "PAY_00184",
+    "settlement_id": "STL_00158",
+    "status": "MATCH",
+    "confidence": null,
+    "decision_source": "M1_EXACT_MATCH",
+    "reason": "Strong identity match locked in by M1; not revisited by M6."
+  },
+  "PAY_00185": {
+    "payment_id": "PAY_00185",
+    "settlement_id": null,
+    "status": "DUPLICATE",
+    "confidence": null,
+    "decision_source": "M2_DETERMINISTIC",
+    "reason": "Duplicate of payment PAY_00184: same order/customer and amount within the duplicate detection window."
+  },
+  "PAY_00188": {
+    "payment_id": "PAY_00188",
+    "settlement_id": null,
+    "status": "UNRESOLVED",
+    "confidence": null,
+    "decision_source": "M2_DETERMINISTIC",
+    "reason": "Unresolved: payment.order_id='ORD_00182' does not resolve to any known order, and no settlement directly references this payment. Relationship cannot be safely established."
+  },
+  "PAY_00189": {
+    "payment_id": "PAY_00189",
+    "settlement_id": "STL_00162",
+    "status": "CONFLICT",
+    "confidence": null,
+    "decision_source": "M2_DETERMINISTIC",
+    "reason": "Conflict: shortfall 3206.86 against settlement STL_00162 is not explained by the fee/GST band and is not a refund - material unexplained discrepancy."
+  },
+  "PAY_00192": {
+    "payment_id": "PAY_00192",
+    "settlement_id": "STL_00166",
+    "status": "REFUND",
+    "confidence": null,
+    "decision_source": "M2_DETERMINISTIC",
+    "reason": "Corroborated refund: payment_status='refunded', settlement STL_00166 status='refunded'/net_amount=-30329.77, order_status='completed'."
+  },
+  "PAY_00193": {
+    "payment_id": "PAY_00193",
+    "settlement_id": null,
+    "status": "MISSING",
+    "confidence": null,
+    "decision_source": "M2_DETERMINISTIC",
+    "reason": "Missing: no directly-referenced or amount/date-plausible settlement candidate found."
+  },
+  "PAY_00196": {
+    "payment_id": "PAY_00196",
+    "settlement_id": "STL_00169",
+    "status": "MATCH",
+    "confidence": null,
+    "decision_source": "M1_EXACT_MATCH",
+    "reason": "Strong identity match locked in by M1; not revisited by M6."
+  },
+  "PAY_00197": {
+    "payment_id": "PAY_00197",
+    "settlement_id": "STL_00170",
+    "status": "MATCH",
+    "confidence": null,
+    "decision_source": "M1_EXACT_MATCH",
+    "reason": "Strong identity match locked in by M1; not revisited by M6."
+  },
+  "PAY_00198": {
+    "payment_id": "PAY_00198",
+    "settlement_id": "STL_00171",
+    "status": "MATCH",
+    "confidence": null,
+    "decision_source": "M1_EXACT_MATCH",
+    "reason": "Strong identity match locked in by M1; not revisited by M6."
+  },
+  "PAY_00200": {
+    "payment_id": "PAY_00200",
+    "settlement_id": "STL_00173",
+    "status": "REFUND",
+    "confidence": null,
+    "decision_source": "M2_DETERMINISTIC",
+    "reason": "Corroborated refund: payment_status='refunded', settlement STL_00173 status='refunded'/net_amount=-40620.40, order_status='completed'."
+  },
+  "PAY_00201": {
+    "payment_id": "PAY_00201",
+    "settlement_id": "STL_00174",
+    "status": "MATCH",
+    "confidence": null,
+    "decision_source": "M1_EXACT_MATCH",
+    "reason": "Strong identity match locked in by M1; not revisited by M6."
+  },
+  "PAY_00203": {
+    "payment_id": "PAY_00203",
+    "settlement_id": "STL_00175",
+    "status": "CONFLICT",
+    "confidence": null,
+    "decision_source": "M2_DETERMINISTIC",
+    "reason": "Conflict: shortfall 7589.98 against settlement STL_00175 is not explained by the fee/GST band and is not a refund - material unexplained discrepancy."
+  },
+  "PAY_00204": {
+    "payment_id": "PAY_00204",
+    "settlement_id": "STL_00176",
+    "status": "MATCH",
+    "confidence": null,
+    "decision_source": "M1_EXACT_MATCH",
+    "reason": "Strong identity match locked in by M1; not revisited by M6."
+  },
+  "PAY_00207": {
+    "payment_id": "PAY_00207",
+    "settlement_id": "STL_00178",
+    "status": "MATCH",
+    "confidence": null,
+    "decision_source": "M1_EXACT_MATCH",
+    "reason": "Strong identity match locked in by M1; not revisited by M6."
+  },
+  "PAY_00209": {
+    "payment_id": "PAY_00209",
+    "settlement_id": "STL_00180",
+    "status": "MATCH",
+    "confidence": null,
+    "decision_source": "M1_EXACT_MATCH",
+    "reason": "Strong identity match locked in by M1; not revisited by M6."
+  },
+  "PAY_00210": {
+    "payment_id": "PAY_00210",
+    "settlement_id": "STL_00181",
+    "status": "MATCH",
+    "confidence": null,
+    "decision_source": "M1_EXACT_MATCH",
+    "reason": "Strong identity match locked in by M1; not revisited by M6."
+  },
+  "PAY_00213": {
+    "payment_id": "PAY_00213",
+    "settlement_id": "STL_00183",
+    "status": "MATCH",
+    "confidence": null,
+    "decision_source": "M1_EXACT_MATCH",
+    "reason": "Strong identity match locked in by M1; not revisited by M6."
+  },
+  "PAY_00214": {
+    "payment_id": "PAY_00214",
+    "settlement_id": "STL_00184",
+    "status": "MATCH",
+    "confidence": null,
+    "decision_source": "M1_EXACT_MATCH",
+    "reason": "Strong identity match locked in by M1; not revisited by M6."
+  }
+}
